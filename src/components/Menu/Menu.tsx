@@ -8,6 +8,8 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 4em;
+  padding: 0.5em calc((100vw - 1024px) / 2);
 `;
 
 const Content = styled.div`
@@ -16,6 +18,41 @@ const Content = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+const StyledNavLink = styled(NavLink)`
+  padding: 0 2em;
+  text-decoration: none;
+  cursor: pointer;
+
+  &.${(props) => props.activeClassName} {
+    color: dodgerblue;
+  }
+`;
+
+const StyledButton = styled.button`
+  background: transparent;
+  border: 2px solid tomato;
+  padding: 1em 2em;
+  border-radius: 2em;
+`;
+
+const BaugetteMenu = styled.div`
+  @media screen and (max-width: 760px) {
+    display: none;
+  }
+`;
+
+const HamburgerMenu = styled.button`
+  background: transparent;
+  border: 2px solid tomato;
+  padding: 1em 2em;
+  border-radius: 2em;
+  display: none;
+
+  @media screen and (max-width: 760px) {
+    display: block;
+  }
 `;
 
 export default function Menu() {
@@ -31,18 +68,19 @@ export default function Menu() {
             object-fit="cover"
           />
         </NavLink>
-        <div>
-          <NavLink activeClassName="selected" to="services">
+        <BaugetteMenu>
+          <StyledNavLink activeClassName="selected" to="services">
             Services
-          </NavLink>
-          <NavLink activeClassName="selected" to="help">
+          </StyledNavLink>
+          <StyledNavLink activeClassName="selected" to="help">
             Help
-          </NavLink>
-          <NavLink activeClassName="selected" to="about">
+          </StyledNavLink>
+          <StyledNavLink activeClassName="selected" to="about">
             About
-          </NavLink>
-        </div>
-        <button>Login</button>
+          </StyledNavLink>
+        </BaugetteMenu>
+        <HamburgerMenu>Menu</HamburgerMenu>
+        <StyledButton>Login</StyledButton>
       </Nav>
       <Switch>
         <Route exact path="/services">
