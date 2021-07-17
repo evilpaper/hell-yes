@@ -34,7 +34,7 @@ const Patty = styled.span`
 
 export default function Burger() {
   return (
-    <StyledBurger>
+    <StyledBurger aria-label="Main menu">
       <Patty />
       <Patty />
       <Patty />

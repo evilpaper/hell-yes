@@ -44,11 +44,7 @@ const BaugetteMenu = styled.div`
   }
 `;
 
-const HamburgerMenu = styled.button`
-  background: transparent;
-  border: 2px solid tomato;
-  padding: 1em 2em;
-  border-radius: 2em;
+const HamburgerMenu = styled.div`
   display: none;
 
   @media screen and (max-width: 760px) {
@@ -80,8 +76,9 @@ export default function Menu() {
             About
           </StyledNavLink>
         </BaugetteMenu>
-        <HamburgerMenu>Menu</HamburgerMenu>
-        <Burger />
+        <HamburgerMenu>
+          <Burger />
+        </HamburgerMenu>
         <StyledButton>Login</StyledButton>
       </Nav>
       <Switch>
