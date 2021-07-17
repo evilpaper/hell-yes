@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink, Switch, Route } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "assets/images/logo.png";
+import Burger from "components/Burger/Burger";
 
 const Nav = styled.nav`
   border: 1px solid tomato;
@@ -80,6 +81,7 @@ export default function Menu() {
           </StyledNavLink>
         </BaugetteMenu>
         <HamburgerMenu>Menu</HamburgerMenu>
+        <Burger />
         <StyledButton>Login</StyledButton>
       </Nav>
       <Switch>
