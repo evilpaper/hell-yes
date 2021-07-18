@@ -10,7 +10,7 @@ const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   height: 4em;
-  padding: 0.5em calc((100vw - 1024px) / 2);
+  padding: 0.4em calc((100vw - 1024px) / 2);
 `;
 
 const Content = styled.div`
@@ -44,7 +44,13 @@ const BaugetteMenu = styled.div`
   }
 `;
 
+const RightPart = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 const HamburgerMenu = styled.div`
+  margin-left: 1em;
   display: none;
 
   @media screen and (max-width: 760px) {
@@ -76,10 +82,12 @@ export default function Menu() {
             About
           </StyledNavLink>
         </BaugetteMenu>
-        <HamburgerMenu>
-          <Burger />
-        </HamburgerMenu>
-        <StyledButton>Login</StyledButton>
+        <RightPart>
+          <StyledButton>Login</StyledButton>
+          <HamburgerMenu>
+            <Burger />
+          </HamburgerMenu>
+        </RightPart>
       </Nav>
       <Switch>
         <Route exact path="/services">

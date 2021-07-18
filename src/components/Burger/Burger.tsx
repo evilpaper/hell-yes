@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledBurger = styled.button`
-  width: 3.2em;
-  height: 3em;
+  width: 32px;
+  height: 28px;
   position: relative;
   cursor: pointer;
   background-color: transparent;
@@ -13,9 +13,9 @@ const StyledBurger = styled.button`
 const Patty = styled.span`
   display: block;
   position: absolute;
-  height: 0.6em;
+  height: 4px;
   width: 100%;
-  border-radius: 9px;
+  border-radius: 4px;
   opacity: 1;
   left: 0;
   background-color: deeppink;
@@ -25,10 +25,10 @@ const Patty = styled.span`
     top: 0;
   }
   &:nth-child(2) {
-    top: 1.2em;
+    top: 12px;
   }
   &:nth-child(3) {
-    top: 2.4em;
+    top: 24px;
   }
 `;
 
