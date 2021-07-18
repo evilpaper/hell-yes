@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink, Switch, Route } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "assets/images/logo.png";
@@ -11,6 +11,10 @@ const Nav = styled.nav`
   align-items: center;
   height: 4em;
   padding: 0.4em calc((100vw - 1024px) / 2);
+
+  @media screen and (max-width: 760px) {
+    padding: 0.4em 1em;
+  }
 `;
 
 const Content = styled.div`
@@ -59,6 +63,7 @@ const HamburgerMenu = styled.div`
 `;
 
 export default function Menu() {
+  const [open, setOpen] = useState(false);
   return (
     <>
       <Nav>
@@ -84,8 +89,8 @@ export default function Menu() {
         </BaugetteMenu>
         <RightPart>
           <StyledButton>Login</StyledButton>
-          <HamburgerMenu>
-            <Burger />
+          <HamburgerMenu onClick={() => setOpen(!open)}>
+            <Burger open={open} />
           </HamburgerMenu>
         </RightPart>
       </Nav>

@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
+interface IPatty {
+  open: boolean;
+}
+
 const StyledBurger = styled.button`
   width: 32px;
   height: 28px;
@@ -10,7 +14,7 @@ const StyledBurger = styled.button`
   border: none;
 `;
 
-const Patty = styled.span`
+const Patty = styled.span<IPatty>`
   display: block;
   position: absolute;
   height: 4px;
@@ -18,7 +22,7 @@ const Patty = styled.span`
   border-radius: 4px;
   opacity: 1;
   left: 0;
-  background-color: deeppink;
+  background-color: ${({ open }) => (open ? "deeppink" : "dodgerblue")};
   transition: 0.2s ease-in-out;
 
   &:nth-child(1) {
@@ -32,12 +36,13 @@ const Patty = styled.span`
   }
 `;
 
-export default function Burger() {
+export default function Burger({ open }: { open: boolean }) {
+  console.log(open);
   return (
     <StyledBurger aria-label="Main menu">
-      <Patty />
-      <Patty />
-      <Patty />
+      <Patty open={open} />
+      <Patty open={open} />
+      <Patty open={open} />
     </StyledBurger>
   );
 }
