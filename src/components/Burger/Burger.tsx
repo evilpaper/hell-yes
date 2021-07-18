@@ -26,13 +26,16 @@ const Patty = styled.span<IPatty>`
   transition: 0.2s ease-in-out;
 
   &:nth-child(1) {
-    top: 0;
+    top: ${({ open }) => (open ? "0" : "12px")};
+    transform: ${({ open }) => (open ? "rotate(0deg)" : "rotate(45deg)")};
   }
   &:nth-child(2) {
     top: 12px;
+    opacity: ${({ open }) => (open ? "1" : "0")};
   }
   &:nth-child(3) {
-    top: 24px;
+    top: ${({ open }) => (open ? "24px" : "12px")};
+    transform: ${({ open }) => (open ? "rotate(0deg)" : "rotate(-45deg)")};
   }
 `;
 
