@@ -10,9 +10,9 @@ const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   height: 4em;
-  padding: 0.4em calc((100vw - 1024px) / 2);
+  padding: 0.4em calc((100vw - 960px) / 2);
 
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 820px) {
     padding: 0.4em 1em;
   }
 `;

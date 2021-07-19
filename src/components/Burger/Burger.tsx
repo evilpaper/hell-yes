@@ -1,18 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import * as Styled from "./Burger.styled";
 
 interface IPatty {
   open: boolean;
 }
-
-const StyledBurger = styled.button`
-  width: 32px;
-  height: 28px;
-  position: relative;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-`;
 
 const Patty = styled.span<IPatty>`
   display: block;
@@ -40,12 +32,11 @@ const Patty = styled.span<IPatty>`
 `;
 
 export default function Burger({ open }: { open: boolean }) {
-  console.log(open);
   return (
-    <StyledBurger aria-label="Main menu">
+    <Styled.Burger aria-label="Main menu">
       <Patty open={open} />
       <Patty open={open} />
       <Patty open={open} />
-    </StyledBurger>
+    </Styled.Burger>
   );
 }
