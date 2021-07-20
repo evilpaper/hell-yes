@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 export const Nav = styled.nav`
-  border: 1px solid tomato;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,8 +33,8 @@ export const StyledNavLink = styled(NavLink)`
 
 export const StyledButton = styled.button`
   background: transparent;
-  border: 2px solid tomato;
-  padding: 1em 2em;
+  border: 1px solid black;
+  padding: 0.6em 2em;
   border-radius: 2em;
 `;
 

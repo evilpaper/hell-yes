@@ -21,19 +21,19 @@ export const Patty = styled.span<IPatty>`
   border-radius: 4px;
   opacity: 1;
   left: 0;
-  background-color: ${({ open }) => (open ? "deeppink" : "dodgerblue")};
+  background-color: black;
   transition: 0.2s ease-in-out;
 
   &:nth-child(1) {
-    top: ${({ open }) => (open ? "0" : "12px")};
-    transform: ${({ open }) => (open ? "rotate(0deg)" : "rotate(45deg)")};
+    top: ${({ open }) => (open ? "12px" : "0")};
+    transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0deg)")};
   }
   &:nth-child(2) {
     top: 12px;
-    opacity: ${({ open }) => (open ? "1" : "0")};
+    opacity: ${({ open }) => (open ? "0" : "1")};
   }
   &:nth-child(3) {
-    top: ${({ open }) => (open ? "24px" : "12px")};
-    transform: ${({ open }) => (open ? "rotate(0deg)" : "rotate(-45deg)")};
+    top: ${({ open }) => (open ? "12px" : "24px")};
+    transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0deg)")};
   }
 `;
