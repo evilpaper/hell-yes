@@ -9,7 +9,7 @@ export default function Menu() {
   return (
     <>
       <Styled.Nav>
-        <Styled.BaugetteMenu>
+        <Styled.LeftPart>
           <NavLink to="/">
             <Styled.Logo
               src={Logo}
@@ -19,19 +19,21 @@ export default function Menu() {
               object-fit="cover"
             />
           </NavLink>
-          <Styled.StyledNavLink activeClassName="selected" to="decks">
-            Decks
-          </Styled.StyledNavLink>
-          <Styled.StyledNavLink activeClassName="selected" to="how">
-            How It Works
-          </Styled.StyledNavLink>
-          <Styled.StyledNavLink activeClassName="selected" to="pricing">
-            Pricing
-          </Styled.StyledNavLink>
-          <Styled.StyledNavLink activeClassName="selected" to="about">
-            About us
-          </Styled.StyledNavLink>
-        </Styled.BaugetteMenu>
+          <Styled.SubwayMenu>
+            <Styled.StyledNavLink activeClassName="selected" to="decks">
+              Decks
+            </Styled.StyledNavLink>
+            <Styled.StyledNavLink activeClassName="selected" to="how">
+              How It Works
+            </Styled.StyledNavLink>
+            <Styled.StyledNavLink activeClassName="selected" to="pricing">
+              Pricing
+            </Styled.StyledNavLink>
+            <Styled.StyledNavLink activeClassName="selected" to="about">
+              About us
+            </Styled.StyledNavLink>
+          </Styled.SubwayMenu>
+        </Styled.LeftPart>
         <Styled.RightPart>
           <Styled.StyledButton>Login</Styled.StyledButton>
           <Styled.HamburgerMenu onClick={() => setOpen(!open)}>

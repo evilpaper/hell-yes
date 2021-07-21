@@ -42,9 +42,7 @@ export const StyledButton = styled.button`
   border-radius: 2em;
 `;
 
-export const BaugetteMenu = styled.div`
-  display: flex;
-  align-items: center;
+export const SubwayMenu = styled.div`
   @media screen and (max-width: 760px) {
     display: none;
   }
@@ -52,6 +50,12 @@ export const BaugetteMenu = styled.div`
 
 export const RightPart = styled.div`
   display: flex;
+  align-items: center;
+`;
+
+export const LeftPart = styled.div`
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
 `;
 
