@@ -9,16 +9,16 @@ export default function Menu() {
   return (
     <>
       <Styled.Nav>
-        <NavLink to="/">
-          <img
-            src={Logo}
-            alt="Nailed It"
-            width="72px"
-            height="auto"
-            object-fit="cover"
-          />
-        </NavLink>
         <Styled.BaugetteMenu>
+          <NavLink to="/">
+            <Styled.Logo
+              src={Logo}
+              alt="Nailed It"
+              width="72px"
+              height="auto"
+              object-fit="cover"
+            />
+          </NavLink>
           <Styled.StyledNavLink activeClassName="selected" to="services">
             Services
           </Styled.StyledNavLink>

@@ -31,14 +31,20 @@ export const StyledNavLink = styled(NavLink)`
   }
 `;
 
+export const Logo = styled.img`
+  display: inline-block;
+`;
+
 export const StyledButton = styled.button`
   background: transparent;
   border: 1px solid black;
-  padding: 0.6em 2em;
+  padding: 0.2em 2em;
   border-radius: 2em;
 `;
 
 export const BaugetteMenu = styled.div`
+  display: flex;
+  align-items: center;
   @media screen and (max-width: 760px) {
     display: none;
   }
