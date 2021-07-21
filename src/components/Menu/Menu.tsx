@@ -19,14 +19,17 @@ export default function Menu() {
               object-fit="cover"
             />
           </NavLink>
-          <Styled.StyledNavLink activeClassName="selected" to="services">
-            Services
+          <Styled.StyledNavLink activeClassName="selected" to="decks">
+            Decks
           </Styled.StyledNavLink>
-          <Styled.StyledNavLink activeClassName="selected" to="help">
-            Help
+          <Styled.StyledNavLink activeClassName="selected" to="how">
+            How It Works
+          </Styled.StyledNavLink>
+          <Styled.StyledNavLink activeClassName="selected" to="pricing">
+            Pricing
           </Styled.StyledNavLink>
           <Styled.StyledNavLink activeClassName="selected" to="about">
-            About
+            About us
           </Styled.StyledNavLink>
         </Styled.BaugetteMenu>
         <Styled.RightPart>
@@ -37,14 +40,19 @@ export default function Menu() {
         </Styled.RightPart>
       </Styled.Nav>
       <Switch>
-        <Route exact path="/services">
+        <Route exact path="/decks">
           <Styled.Content>
-            <h1>I'm Services</h1>
+            <h1>I'm Decks</h1>
           </Styled.Content>
         </Route>
-        <Route exact path="/help">
+        <Route exact path="/how">
           <Styled.Content>
-            <h1>I'm Help</h1>
+            <h1>I'm How It Works</h1>
+          </Styled.Content>
+        </Route>
+        <Route exact path="/pricing">
+          <Styled.Content>
+            <h1>I'm Pricing</h1>
           </Styled.Content>
         </Route>
         <Route exact path="/about">
