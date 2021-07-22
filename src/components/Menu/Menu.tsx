@@ -14,7 +14,7 @@ export default function Menu() {
             <Styled.Logo
               src={Logo}
               alt="Nailed It"
-              width="72px"
+              width="54px"
               height="auto"
               object-fit="cover"
             />
@@ -23,14 +23,11 @@ export default function Menu() {
             <Styled.StyledNavLink activeClassName="selected" to="decks">
               Decks
             </Styled.StyledNavLink>
-            <Styled.StyledNavLink activeClassName="selected" to="how">
-              How It Works
-            </Styled.StyledNavLink>
             <Styled.StyledNavLink activeClassName="selected" to="pricing">
               Pricing
             </Styled.StyledNavLink>
             <Styled.StyledNavLink activeClassName="selected" to="about">
-              About us
+              About
             </Styled.StyledNavLink>
           </Styled.SubwayMenu>
         </Styled.LeftPart>
@@ -45,11 +42,6 @@ export default function Menu() {
         <Route exact path="/decks">
           <Styled.Content>
             <h1>I'm Decks</h1>
-          </Styled.Content>
-        </Route>
-        <Route exact path="/how">
-          <Styled.Content>
-            <h1>I'm How It Works</h1>
           </Styled.Content>
         </Route>
         <Route exact path="/pricing">

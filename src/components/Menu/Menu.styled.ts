@@ -5,11 +5,10 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 4em;
-  padding: 0.4em calc((100vw - 960px) / 2);
+  padding: 0.8em calc((100vw - 1024px) / 2);
 
-  @media screen and (max-width: 820px) {
-    padding: 0.4em 1em;
+  @media screen and (max-width: 760px) {
+    padding: 0.8em 1em;
   }
 `;
 
@@ -25,9 +24,10 @@ export const StyledNavLink = styled(NavLink)`
   padding: 0 2em;
   text-decoration: none;
   cursor: pointer;
+  color: gray;
 
   &.${(props) => props.activeClassName} {
-    color: dodgerblue;
+    color: white;
   }
 `;
 
@@ -36,13 +36,16 @@ export const Logo = styled.img`
 `;
 
 export const StyledButton = styled.button`
-  background: transparent;
-  border: 1px solid black;
+  background: white;
+  border: 1px solid white;
   padding: 0.2em 2em;
   border-radius: 2em;
+  color: black;
 `;
 
 export const SubwayMenu = styled.div`
+  margin-left: 2em;
+
   @media screen and (max-width: 760px) {
     display: none;
   }

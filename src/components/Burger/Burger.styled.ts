@@ -21,7 +21,7 @@ export const Patty = styled.span<IPatty>`
   border-radius: 4px;
   opacity: 1;
   left: 0;
-  background-color: black;
+  background-color: white;
   transition: 0.2s ease-in-out;
 
   &:nth-child(1) {
