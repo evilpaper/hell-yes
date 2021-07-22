@@ -20,15 +20,15 @@ export default function Menu() {
             />
           </NavLink>
           <Styled.SubwayMenu>
-            <Styled.StyledNavLink activeClassName="selected" to="decks">
+            <Styled.RouterNavLink activeClassName="selected" to="decks">
               Decks
-            </Styled.StyledNavLink>
-            <Styled.StyledNavLink activeClassName="selected" to="pricing">
+            </Styled.RouterNavLink>
+            <Styled.RouterNavLink activeClassName="selected" to="pricing">
               Pricing
-            </Styled.StyledNavLink>
-            <Styled.StyledNavLink activeClassName="selected" to="about">
+            </Styled.RouterNavLink>
+            <Styled.RouterNavLink activeClassName="selected" to="about">
               About
-            </Styled.StyledNavLink>
+            </Styled.RouterNavLink>
           </Styled.SubwayMenu>
         </Styled.LeftPart>
         <Styled.RightPart>

@@ -20,7 +20,7 @@ export const Content = styled.div`
   align-items: center;
 `;
 
-export const StyledNavLink = styled(NavLink)`
+export const RouterNavLink = styled(NavLink)`
   padding: 0 2em;
   text-decoration: none;
   cursor: pointer;
