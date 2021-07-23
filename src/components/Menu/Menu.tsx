@@ -3,6 +3,7 @@ import { NavLink, Switch, Route } from "react-router-dom";
 import Logo from "assets/images/logo.png";
 import Burger from "components/Burger/Burger";
 import * as Styled from "./Menu.styled";
+import { addSyntheticLeadingComment } from "typescript";
 
 export default function Menu() {
   const [open, setOpen] = useState(false);
@@ -32,12 +33,13 @@ export default function Menu() {
           </Styled.SubwayMenu>
         </Styled.LeftPart>
         <Styled.RightPart>
-          <Styled.StyledButton>Login</Styled.StyledButton>
-          <Styled.HamburgerMenu onClick={() => setOpen(!open)}>
+          <Styled.Button>Login</Styled.Button>
+          <Styled.BurgerBox onClick={() => setOpen(!open)}>
             <Burger open={open} />
-          </Styled.HamburgerMenu>
+          </Styled.BurgerBox>
         </Styled.RightPart>
       </Styled.Nav>
+      <Styled.HamburgerMenu open={open} />
       <Switch>
         <Route exact path="/decks">
           <Styled.Content>

@@ -1,10 +1,20 @@
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
+interface IHamburgerMenu {
+  open: boolean;
+}
+
 export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 20;
+
+  position: fixed;
+  top: 0;
+  width: 100%;
+
   padding: 0.8em calc((100vw - 1024px) / 2);
 
   @media screen and (max-width: 760px) {
@@ -35,7 +45,7 @@ export const Logo = styled.img`
   display: inline-block;
 `;
 
-export const StyledButton = styled.button`
+export const Button = styled.button`
   background: white;
   border: 1px solid white;
   padding: 0.2em 2em;
@@ -62,11 +72,19 @@ export const LeftPart = styled.div`
   align-items: center;
 `;
 
-export const HamburgerMenu = styled.div`
+export const BurgerBox = styled.div`
   margin-left: 1em;
   display: none;
 
   @media screen and (max-width: 760px) {
     display: block;
   }
+`;
+
+export const HamburgerMenu = styled.div<IHamburgerMenu>`
+  width: 100vhw;
+  height: 100vh;
+  background-color: white;
+
+  display: ${({ open }) => (open ? "block" : "none")};
 `;
