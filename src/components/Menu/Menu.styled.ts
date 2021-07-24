@@ -82,9 +82,12 @@ export const BurgerBox = styled.div`
 `;
 
 export const HamburgerMenu = styled.div<IHamburgerMenu>`
-  width: 100vhw;
-  height: 100vh;
-  background-color: ${(props) => props.theme.colors.white};
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: ${(props) => props.theme.colors.error};
 
   display: ${({ open }) => (open ? "block" : "none")};
 `;

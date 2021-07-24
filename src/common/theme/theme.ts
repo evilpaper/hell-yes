@@ -4,6 +4,7 @@ const BLACK = "#000";
 const WHITE = "#EEE";
 const RED = "tomato";
 
+// theme is just a basic object. DefaultTheme is an interface that defines the type.
 export const theme: DefaultTheme = {
   colors: {
     black: BLACK,
