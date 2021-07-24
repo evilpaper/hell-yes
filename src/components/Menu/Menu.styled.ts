@@ -11,7 +11,7 @@ export const Nav = styled.nav`
   align-items: center;
   z-index: 20;
 
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
 
@@ -84,7 +84,7 @@ export const BurgerBox = styled.div`
 export const HamburgerMenu = styled.div<IHamburgerMenu>`
   width: 100vhw;
   height: 100vh;
-  background-color: white;
+  background-color: ${(props) => props.theme.colors.white};
 
   display: ${({ open }) => (open ? "block" : "none")};
 `;
