@@ -88,6 +88,6 @@ export const HamburgerMenu = styled.div<IHamburgerMenu>`
   width: 100%;
   height: 100%;
   background-color: ${(props) => props.theme.colors.error};
-
-  display: ${({ open }) => (open ? "block" : "none")};
+  transition: 0.3s ease-in-out;
+  transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
 `;

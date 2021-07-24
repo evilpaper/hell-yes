@@ -3,7 +3,6 @@ import { NavLink, Switch, Route } from "react-router-dom";
 import Logo from "assets/images/logo.png";
 import Burger from "components/Burger/Burger";
 import * as Styled from "./Menu.styled";
-import { addSyntheticLeadingComment } from "typescript";
 
 export default function Menu() {
   const [open, setOpen] = useState(false);
