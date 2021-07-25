@@ -84,7 +84,16 @@ export default function Menu() {
         </Route>
         <Route path="/">
           <Styled.Content>
-            <h1>I'm Landing</h1>
+            <h1>I'm Hero Section on Landing</h1>
+          </Styled.Content>
+          <Styled.Content>
+            <h1>I'm Featured Decks Section on Landing</h1>
+          </Styled.Content>
+          <Styled.Content>
+            <h1>I'm Testamonial Section on Landing</h1>
+          </Styled.Content>
+          <Styled.Content>
+            <h1>I'm Pricing Section on Landing</h1>
           </Styled.Content>
         </Route>
       </Switch>
