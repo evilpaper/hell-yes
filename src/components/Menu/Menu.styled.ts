@@ -87,7 +87,12 @@ export const HamburgerMenu = styled.div<IHamburgerMenu>`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: ${(props) => props.theme.colors.error};
+  background-color: ${(props) => props.theme.colors.black};
   transition: 0.3s ease-in-out;
   transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
 `;

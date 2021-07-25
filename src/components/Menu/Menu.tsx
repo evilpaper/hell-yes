@@ -6,6 +6,11 @@ import * as Styled from "./Menu.styled";
 
 export default function Menu() {
   const [open, setOpen] = useState(false);
+
+  function toggleMenu(): void {
+    setOpen(!open);
+  }
+
   return (
     <>
       <Styled.Nav>
@@ -33,12 +38,34 @@ export default function Menu() {
         </Styled.LeftPart>
         <Styled.RightPart>
           <Styled.Button>Login</Styled.Button>
-          <Styled.BurgerBox onClick={() => setOpen(!open)}>
+          <Styled.BurgerBox onClick={toggleMenu}>
             <Burger open={open} />
           </Styled.BurgerBox>
         </Styled.RightPart>
       </Styled.Nav>
-      <Styled.HamburgerMenu open={open} />
+      <Styled.HamburgerMenu open={open}>
+        <Styled.RouterNavLink
+          activeClassName="selected"
+          to="decks"
+          onClick={toggleMenu}
+        >
+          Decks
+        </Styled.RouterNavLink>
+        <Styled.RouterNavLink
+          activeClassName="selected"
+          to="pricing"
+          onClick={toggleMenu}
+        >
+          Pricing
+        </Styled.RouterNavLink>
+        <Styled.RouterNavLink
+          activeClassName="selected"
+          to="about"
+          onClick={toggleMenu}
+        >
+          About
+        </Styled.RouterNavLink>
+      </Styled.HamburgerMenu>
       <Switch>
         <Route exact path="/decks">
           <Styled.Content>
