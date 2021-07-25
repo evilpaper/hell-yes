@@ -46,11 +46,17 @@ export const Logo = styled.img`
 `;
 
 export const Button = styled.button`
-  background: white;
-  border: 1px solid white;
+  color: white;
+  background: hsl(23, 100%, 50%);
+  border: 1px solid hsl(23, 100%, 50%);
   padding: 0.2em 2em;
   border-radius: 2em;
-  color: black;
+
+  &:hover {
+    color: white;
+    background: hsl(23, 100%, 60%);
+    border: 1px solid hsl(23, 100%, 60%);
+  }
 `;
 
 export const SubwayMenu = styled.div`

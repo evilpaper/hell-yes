@@ -35,7 +35,7 @@ ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
-  background-color: black;
+  background-color: hsl(253, 33%, 5%);
   color: white;
 }
 
@@ -55,6 +55,7 @@ button,
 textarea,
 select {
   font: inherit;
+  font-size: 16px;
 }
 
 /* Remove underline on navigation items */
