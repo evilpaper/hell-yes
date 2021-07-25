@@ -22,7 +22,7 @@ export const Nav = styled.nav`
   }
 `;
 
-export const Content = styled.div`
+export const Content = styled.section`
   width: 100%;
   height: 100vh;
   display: flex;

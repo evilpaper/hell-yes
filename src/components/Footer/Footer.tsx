@@ -18,7 +18,10 @@ export default function Footer() {
 
   return (
     <>
-      <CopyrightFolio>© {year} Hell Yes | All Rights Reserved</CopyrightFolio>;
+      <CopyrightFolio>
+        Copyright © {year} Hell Yes | All Rights Reserved
+      </CopyrightFolio>
+      ;
       <LegalLinksFolio>
         Terms of service | Privacy Policy | Cookies
       </LegalLinksFolio>

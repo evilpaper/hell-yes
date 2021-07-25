@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink, Switch, Route } from "react-router-dom";
 import Logo from "assets/images/logo.png";
 import Burger from "components/Burger/Burger";
+import Hero from "components/Hero/Hero";
 import * as Styled from "./Menu.styled";
 
 export default function Menu() {
@@ -83,9 +84,7 @@ export default function Menu() {
           </Styled.Content>
         </Route>
         <Route path="/">
-          <Styled.Content>
-            <h1>I'm Hero Section on Landing</h1>
-          </Styled.Content>
+          <Hero />
           <Styled.Content>
             <h1>I'm Featured Decks Section on Landing</h1>
           </Styled.Content>
