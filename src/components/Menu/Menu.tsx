@@ -44,27 +44,27 @@ export default function Menu() {
         </Styled.RightPart>
       </Styled.Nav>
       <Styled.HamburgerMenu open={open}>
-        <Styled.RouterNavLink
+        <Styled.HambugerMenuLink
           activeClassName="selected"
           to="decks"
           onClick={toggleMenu}
         >
           Decks
-        </Styled.RouterNavLink>
-        <Styled.RouterNavLink
+        </Styled.HambugerMenuLink>
+        <Styled.HambugerMenuLink
           activeClassName="selected"
           to="pricing"
           onClick={toggleMenu}
         >
           Pricing
-        </Styled.RouterNavLink>
-        <Styled.RouterNavLink
+        </Styled.HambugerMenuLink>
+        <Styled.HambugerMenuLink
           activeClassName="selected"
           to="about"
           onClick={toggleMenu}
         >
           About
-        </Styled.RouterNavLink>
+        </Styled.HambugerMenuLink>
       </Styled.HamburgerMenu>
       <Switch>
         <Route exact path="/decks">

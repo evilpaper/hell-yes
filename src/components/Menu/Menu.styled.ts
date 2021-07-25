@@ -96,3 +96,7 @@ export const HamburgerMenu = styled.div<IHamburgerMenu>`
   align-items: center;
   color: white;
 `;
+export const HambugerMenuLink = styled(RouterNavLink)`
+  font-size: 2.4em;
+  padding: 0.4em 0;
+`;
