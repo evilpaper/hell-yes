@@ -2,7 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const Section = styled.section`
-  width: 100%;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
   height: 100vh;
   display: flex;
   justify-content: flex-start;
