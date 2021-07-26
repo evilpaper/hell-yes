@@ -3,37 +3,45 @@ import bg from "assets/images/section-1-bg.jpg";
 import styled from "styled-components";
 
 const Section = styled.section`
-  height: 80vh;
+  height: 90vh;
   background-image: url(${bg});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 `;
 
-const Center = styled.div`
-  display: flex;
-  height: 100%;
-  justify-content: flex-start;
-  align-items: center;
+const Body = styled.div`
+  height: 90%;
   max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 1em;
   padding-right: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
-const Headline = styled.h1`
-  font-size: 6em;
+const Title = styled.h1`
+  font-size: 3em;
   font-weight: bold;
-  background-color: transparent;
+`;
+
+const Subtitle = styled.h2`
+  font-size: 1.2em;
+  font-weight: regular;
 `;
 
 export default function Hero() {
   return (
     <Section>
-      <Center>
-        <Headline>Nail any subject</Headline>
-      </Center>
+      <Body>
+        <Title>Nail your next technical interview</Title>
+        <Subtitle>
+          Study flash cards to enhance learning and nail your tests. Use our
+          ready-made decks or make you own.
+        </Subtitle>
+      </Body>
     </Section>
   );
 }

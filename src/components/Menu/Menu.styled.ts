@@ -11,13 +11,13 @@ export const Nav = styled.nav`
   align-items: center;
   z-index: 20;
 
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
 
   padding: 0.8em calc((100vw - 1024px) / 2);
 
-  @media screen and (max-width: 760px) {
+  @media screen and (max-width: 1024px) {
     padding: 0.8em 1em;
   }
 `;
@@ -34,7 +34,7 @@ export const RouterNavLink = styled(NavLink)`
   padding: 0 2em;
   text-decoration: none;
   cursor: pointer;
-  color: gray;
+  color: ${(props) => props.theme.color.greyLightest};
 
   &.${(props) => props.activeClassName} {
     color: white;
@@ -93,7 +93,7 @@ export const HamburgerMenu = styled.div<IHamburgerMenu>`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: ${(props) => props.theme.colors.black};
+  background-color: ${(props) => props.theme.color.black};
   transition: 0.3s ease-in-out;
   transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
   display: flex;
@@ -102,6 +102,7 @@ export const HamburgerMenu = styled.div<IHamburgerMenu>`
   align-items: center;
   color: white;
 `;
+
 export const HambugerMenuLink = styled(RouterNavLink)`
   font-size: 2.4em;
   padding: 0.4em 0;
