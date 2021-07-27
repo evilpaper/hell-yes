@@ -43,9 +43,20 @@ const Subtitle = styled.h2`
   max-width: 28em;
 `;
 
-const Line = styled.p`
-  margin-top: 1em;
-  color: ${(props) => props.theme.color.greyLightest};
+export const Button = styled.button`
+  color: white;
+  background: hsl(23, 100%, 50%);
+  border: 1px solid hsl(23, 100%, 50%);
+  padding: 0.2rem 2rem;
+  border-radius: 2em;
+  width: 18em;
+  margin-top: 2em;
+
+  &:hover {
+    color: white;
+    background: hsl(23, 100%, 60%);
+    border: 1px solid hsl(23, 100%, 60%);
+  }
 `;
 
 export default function Hero() {
@@ -54,10 +65,10 @@ export default function Hero() {
       <Body>
         <Title>Nail technical interviews</Title>
         <Subtitle>
-          Study flash cards to enhance learning and nail your tests. Use our
-          ready-made decks or make you own.
+          Study flash cards and nail your next tests. Use our ready-made decks
+          or make you own. Try now, no account required.{" "}
         </Subtitle>
-        <Line>Try it now, no account required</Line>
+        <Button>Create your free account</Button>
       </Body>
     </Section>
   );
