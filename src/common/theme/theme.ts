@@ -1,6 +1,6 @@
 import { DefaultTheme } from "styled-components";
 
-const BLACK = "#000";
+const BLACK = "hsl(254, 100%, 4%)";
 const WHITE = "#EEE";
 const RED = "tomato";
 

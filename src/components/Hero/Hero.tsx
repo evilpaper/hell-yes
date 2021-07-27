@@ -28,19 +28,25 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.h2`
-  font-size: 1.2em;
+  font-size: 1.4em;
   font-weight: regular;
+`;
+
+const Line = styled.p`
+  margin-top: 1em;
+  color: ${(props) => props.theme.color.greyLightest};
 `;
 
 export default function Hero() {
   return (
     <Section>
       <Body>
-        <Title>Nail your next technical interview</Title>
+        <Title>Nail technical interviews</Title>
         <Subtitle>
           Study flash cards to enhance learning and nail your tests. Use our
           ready-made decks or make you own.
         </Subtitle>
+        <Line>Try it now, no account required</Line>
       </Body>
     </Section>
   );

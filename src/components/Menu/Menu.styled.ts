@@ -15,7 +15,7 @@ export const Nav = styled.nav`
   top: 0;
   width: 100%;
 
-  padding: 0.8em calc((100vw - 1024px) / 2);
+  padding: 1em calc((100vw - 1024px) / 2);
 
   @media screen and (max-width: 1024px) {
     padding: 0.8em 1em;
@@ -34,10 +34,11 @@ export const RouterNavLink = styled(NavLink)`
   padding: 0 2em;
   text-decoration: none;
   cursor: pointer;
-  color: ${(props) => props.theme.color.greyLightest};
+  font-weight: 700;
+  color: ${(props) => props.theme.color.white};
 
   &.${(props) => props.activeClassName} {
-    color: white;
+    color: dodgerblue;
   }
 `;
 
