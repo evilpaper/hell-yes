@@ -77,8 +77,8 @@ export default function Hero() {
         <Stack>
           <Title>Nail technical interviews</Title>
           <Subtitle>
-            Study flash cards and nail your next tests. Use our ready-made decks
-            or make you own. Try now, no account required.{" "}
+            Use flash cards to learn fast. Take our ready-made decks or create
+            your own. Try now, no account required.{" "}
           </Subtitle>
           <Button>Create your free account</Button>
         </Stack>

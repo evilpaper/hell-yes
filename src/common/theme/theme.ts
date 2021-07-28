@@ -6,7 +6,7 @@ const GREYDARKEST = "hsl(250, 14%, 9%)";
 const GREYDARK = "hsl(248, 10%, 15%)";
 const GREY = "hsl(254, 8%, 23%)";
 const GREYLIGHT = "hsl(254, 4%, 54%)";
-const GREYLIGHTEST = "hsl(254, 9%, 78%)";
+const GREYLIGHTEST = "hsl(254, 9%, 82%)";
 const WHITE = "hsl(30, 50%, 98%)";
 
 // Primary colors

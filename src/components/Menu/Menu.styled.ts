@@ -35,10 +35,10 @@ export const RouterNavLink = styled(NavLink)`
   text-decoration: none;
   cursor: pointer;
   font-weight: 500;
-  color: ${(props) => props.theme.color.white};
+  color: ${(props) => props.theme.color.greyLightest};
 
   &.${(props) => props.activeClassName} {
-    color: dodgerblue;
+    color: ${(props) => props.theme.color.white};
   }
 `;
 
