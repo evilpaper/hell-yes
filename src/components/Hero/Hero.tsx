@@ -26,7 +26,7 @@ const Title = styled.h1`
   font-size: 4.8em;
   font-weight: bold;
   max-width: 10em;
-  line-height: 1.3;
+  line-height: 1.2;
 
   @media screen and (max-width: 768px) {
     font-size: 4em;
@@ -38,24 +38,27 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.h2`
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-weight: regular;
   max-width: 28em;
 `;
 
 export const Button = styled.button`
   color: white;
-  background: hsl(23, 100%, 50%);
-  border: 1px solid hsl(23, 100%, 50%);
-  padding: 0.2rem 2rem;
-  border-radius: 2em;
-  width: 18em;
-  margin-top: 2em;
+  background-color: ${(props) => props.theme.color.primary};
+  border: 1px solid ${(props) => props.theme.color.primary};
+  padding: 0.3rem 1.6rem;
+  border-radius: 2rem;
+  max-width: 16rem;
+  margin-top: 2rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
 
   &:hover {
-    color: white;
-    background: hsl(23, 100%, 60%);
-    border: 1px solid hsl(23, 100%, 60%);
+    color: ${(props) => props.theme.color.black};
+    background-color: ${(props) => props.theme.color.primaryLight};
+    border: 1px solid ${(props) => props.theme.color.primaryLight};
   }
 `;
 

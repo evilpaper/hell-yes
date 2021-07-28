@@ -47,16 +47,18 @@ export const Logo = styled.img`
 `;
 
 export const Button = styled.button`
-  color: white;
-  background: hsl(23, 100%, 50%);
-  border: 1px solid hsl(23, 100%, 50%);
-  padding: 0.2em 2em;
-  border-radius: 2em;
+  color: ${(props) => props.theme.color.greyDark};
+  background-color: ${(props) => props.theme.color.white};
+  border: 1px solid ${(props) => props.theme.color.white};
+  padding: 0.3rem 1.6rem;
+  border-radius: 2rem;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
-    color: white;
-    background: hsl(23, 100%, 60%);
-    border: 1px solid hsl(23, 100%, 60%);
+    color: ${(props) => props.theme.color.white};
+    background-color: ${(props) => props.theme.color.primary};
+    border: 1px solid ${(props) => props.theme.color.primary};
   }
 `;
 

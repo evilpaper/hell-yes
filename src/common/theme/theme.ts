@@ -10,10 +10,10 @@ const GREYLIGHTEST = "hsl(254, 9%, 78%)";
 const WHITE = "hsl(30, 50%, 98%)";
 
 // Primary colors
-const PRIMARYDARKEST = "hsl(195, 100%, 9%)";
-const PRIMARYDARK = "hsl(195, 100%, 15%)";
-const PRIMARY = "hsl(195, 100%, 54%)";
-const PRIMARYLIGHT = "hsl(195, 95%, 59%)";
+const PRIMARYDARKEST = "hsl(195, 100%, 24%)";
+const PRIMARYDARK = "hsl(195, 100%, 34%)";
+const PRIMARY = "hsl(195, 96%, 42%)";
+const PRIMARYLIGHT = "hsl(195, 95%, 54%)";
 const PRIMARYLIGHTEST = "hsl(195, 90%, 74%)";
 
 // Nottfication colors
