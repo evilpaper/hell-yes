@@ -22,11 +22,20 @@ const Body = styled.div`
   justify-content: center;
 `;
 
+const Stack = styled.div`
+  & > * {
+    margin: 0;
+  }
+  & > * + * {
+    margin-top: 2rem;
+  }
+`;
+
 const Title = styled.h1`
   font-size: 4.8em;
   font-weight: bold;
   max-width: 10em;
-  line-height: 1.2;
+  line-height: 1;
 
   @media screen and (max-width: 768px) {
     font-size: 4em;
@@ -50,7 +59,6 @@ export const Button = styled.button`
   padding: 0.3rem 1.6rem;
   border-radius: 2rem;
   max-width: 16rem;
-  margin-top: 2rem;
   font-weight: 600;
   transition: all 0.2s ease-in-out;
   display: inline-block;
@@ -66,12 +74,14 @@ export default function Hero() {
   return (
     <Section>
       <Body>
-        <Title>Nail technical interviews</Title>
-        <Subtitle>
-          Study flash cards and nail your next tests. Use our ready-made decks
-          or make you own. Try now, no account required.{" "}
-        </Subtitle>
-        <Button>Create your free account</Button>
+        <Stack>
+          <Title>Nail technical interviews</Title>
+          <Subtitle>
+            Study flash cards and nail your next tests. Use our ready-made decks
+            or make you own. Try now, no account required.{" "}
+          </Subtitle>
+          <Button>Create your free account</Button>
+        </Stack>
       </Body>
     </Section>
   );
