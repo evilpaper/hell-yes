@@ -1,26 +1,44 @@
 import { DefaultTheme } from "styled-components";
 
+// Base colors
 const BLACK = "hsl(254, 100%, 4%)";
-const WHITE = "#EEE";
-const RED = "tomato";
+const GREYDARKEST = "hsl(250, 14%, 9%)";
+const GREYDARK = "hsl(248, 10%, 15%)";
+const GREY = "hsl(254, 8%, 23%)";
+const GREYLIGHT = "hsl(254, 4%, 54%)";
+const GREYLIGHTEST = "hsl(254, 9%, 78%)";
+const WHITE = "hsl(30, 50%, 98%)";
 
-const GREYDARKEST = "hsl(220, 14%, 9%)";
-const GREYDARK = "hsl(218, 10%, 15%)";
-const GREY = "hsl(220, 8%, 23%)";
-const GREYLIGHT = "hsl(224, 4%, 54%)";
-const GREYLIGHTEST = "hsl(222, 9%, 78%)";
+// Primary colors
+const PRIMARYDARKEST = "hsl(195, 100%, 9%)";
+const PRIMARYDARK = "hsl(195, 100%, 15%)";
+const PRIMARY = "hsl(195, 100%, 54%)";
+const PRIMARYLIGHT = "hsl(195, 95%, 59%)";
+const PRIMARYLIGHTEST = "hsl(195, 90%, 74%)";
 
-// theme is just a basic object. DefaultTheme is an interface that defines the type.
+// Nottfication colors
+const SUCCESS = "hsl(95, 70%, 44%)";
+const ERROR = "hsl(5, 99%, 50%)";
+const WARNING = "hsl(48, 98%, 49%)";
+
+// Theme is just an object. "DefaultTheme" is an interface that defines the type.
 export const theme: DefaultTheme = {
   color: {
     black: BLACK,
-    white: WHITE,
-    error: RED,
     greyDarkest: GREYDARKEST,
     greyDark: GREYDARK,
     grey: GREY,
     greyLight: GREYLIGHT,
     greyLightest: GREYLIGHTEST,
+    white: WHITE,
+    primaryDarkest: PRIMARYDARKEST,
+    primaryDark: PRIMARYDARK,
+    primary: PRIMARY,
+    primaryLight: PRIMARYLIGHT,
+    primaryLightest: PRIMARYLIGHTEST,
+    success: SUCCESS,
+    error: ERROR,
+    warning: WARNING,
   },
   space: {
     none: 0,
