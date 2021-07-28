@@ -1,0 +1,52 @@
+import React from "react";
+import styled from "styled-components";
+
+const Body = styled.div`
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const SectionHeading = styled.h2`
+  font-weight: 600;
+`;
+
+const List = styled.ul`
+  margin-top: 1rem;
+  display: flex;
+
+  z-index: 10;
+`;
+
+const Card = styled.li`
+  min-width: 16rem;
+  height: 20rem;
+  border-radius: 1rem;
+  color: black;
+  background-color: white;
+  margin-right: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export default function Featured() {
+  return (
+    <Body>
+      <SectionHeading>Featured decks</SectionHeading>
+      <List>
+        <Card>I'm a card</Card>
+        <Card>I'm a card</Card>
+        <Card>I'm a card</Card>
+        <Card>I'm a card</Card>
+        <Card>I'm a card</Card>
+        <Card>I'm a card</Card>
+      </List>
+    </Body>
+  );
+}

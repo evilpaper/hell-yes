@@ -3,7 +3,7 @@ import bg from "assets/images/section-1-bg.jpg";
 import styled from "styled-components";
 
 const Section = styled.section`
-  height: 90vh;
+  height: 70vh;
   background-image: url(${bg});
   background-position: center;
   background-repeat: no-repeat;
@@ -19,7 +19,7 @@ const Body = styled.div`
   padding-right: 1em;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
 `;
 
 const Stack = styled.div`
@@ -64,9 +64,8 @@ export const Button = styled.button`
   display: inline-block;
 
   &:hover {
-    color: ${(props) => props.theme.color.black};
-    background-color: ${(props) => props.theme.color.primaryLight};
-    border: 1px solid ${(props) => props.theme.color.primaryLight};
+    background-color: ${(props) => props.theme.color.primaryDark};
+    border: 1px solid ${(props) => props.theme.color.primaryDark};
   }
 `;
 
@@ -77,8 +76,8 @@ export default function Hero() {
         <Stack>
           <Title>Nail technical interviews</Title>
           <Subtitle>
-            Use flash cards to learn fast. Take our ready-made decks or create
-            your own. Try now, no account required.{" "}
+            Flash cards for fast learning. Use our ready-made decks or create
+            your own. Try now, no account required.
           </Subtitle>
           <Button>Create your free account</Button>
         </Stack>
