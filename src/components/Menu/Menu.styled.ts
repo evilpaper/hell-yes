@@ -47,7 +47,7 @@ export const Logo = styled.img`
 `;
 
 export const Button = styled.button`
-  color: ${(props) => props.theme.color.greyDark};
+  color: ${(props) => props.theme.color.greyDarkest};
   background-color: ${(props) => props.theme.color.white};
   border: 1px solid ${(props) => props.theme.color.white};
   padding: 0.3rem 1.6rem;
@@ -59,6 +59,7 @@ export const Button = styled.button`
     color: ${(props) => props.theme.color.white};
     background-color: ${(props) => props.theme.color.primary};
     border: 1px solid ${(props) => props.theme.color.primary};
+    transition: all 0.2s ease-in-out;
   }
 `;
 

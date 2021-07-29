@@ -53,7 +53,7 @@ const Subtitle = styled.h2`
 `;
 
 export const Button = styled.button`
-  color: white;
+  color: ${(props) => props.theme.color.white};
   background-color: ${(props) => props.theme.color.primary};
   border: 1px solid ${(props) => props.theme.color.primary};
   padding: 0.3rem 1.6rem;
@@ -61,11 +61,12 @@ export const Button = styled.button`
   max-width: 16rem;
   font-weight: 600;
   transition: all 0.2s ease-in-out;
-  display: inline-block;
 
   &:hover {
-    background-color: ${(props) => props.theme.color.primaryDark};
-    border: 1px solid ${(props) => props.theme.color.primaryDark};
+    color: ${(props) => props.theme.color.greyDarkest};
+    background-color: ${(props) => props.theme.color.white};
+    border: 1px solid ${(props) => props.theme.color.white};
+    transition: all 0.2s ease-in-out;
   }
 `;
 
