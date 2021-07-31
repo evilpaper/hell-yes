@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import bg from "assets/images/section-1-bg.jpg";
 import styled from "styled-components";
 
@@ -12,11 +12,11 @@ const Section = styled.section`
 
 const Body = styled.div`
   height: 90%;
-  max-width: 1024px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1em;
-  padding-right: 1em;
+  // max-width: 1024px;
+  // margin-left: auto;
+  // margin-right: auto;
+  padding-left: 4%;
+  padding-right: 4%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -71,9 +71,17 @@ export const Button = styled.button`
 `;
 
 export default function Hero() {
+  const bodyEl = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // console.log(typeof bodyEl?.current?.getBoundingClientRect());
+    const left = bodyEl?.current?.getBoundingClientRect().left;
+    console.log(left);
+  }, []);
+
   return (
     <Section>
-      <Body>
+      <Body ref={bodyEl}>
         <Stack>
           <Title>Nail technical interviews</Title>
           <Subtitle>

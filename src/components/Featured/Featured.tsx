@@ -2,11 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const Body = styled.div`
-  max-width: 1024px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 4%;
+  padding-right: 4%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,7 +17,11 @@ const List = styled.ul`
   margin-top: 1rem;
   display: flex;
 
-  z-index: 10;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+
+  scroll-snap-type: x mandatory;
 `;
 
 const Card = styled.li`
