@@ -22,14 +22,6 @@ export const Nav = styled.nav`
   }
 `;
 
-export const Content = styled.section`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
 export const RouterNavLink = styled(NavLink)`
   padding: 1em;
   margin: 0 2em;

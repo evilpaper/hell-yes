@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { NavLink, Switch, Route } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Logo from "assets/images/logo.png";
 import Burger from "components/Burger/Burger";
-import Hero from "components/Hero/Hero";
-import Featured from "components/Featured/Featured";
+
 import * as Styled from "./Menu.styled";
 
 export default function Menu() {
@@ -68,33 +67,6 @@ export default function Menu() {
           About
         </Styled.HambugerMenuLink>
       </Styled.HamburgerMenu>
-      <Switch>
-        <Route exact path="/decks">
-          <Styled.Content>
-            <h1>I'm Decks</h1>
-          </Styled.Content>
-        </Route>
-        <Route exact path="/pricing">
-          <Styled.Content>
-            <h1>I'm Pricing</h1>
-          </Styled.Content>
-        </Route>
-        <Route exact path="/about">
-          <Styled.Content>
-            <h1>I'm About</h1>
-          </Styled.Content>
-        </Route>
-        <Route path="/">
-          <Hero />
-          <Featured />
-          <Styled.Content>
-            <h1>I'm Testamonial Section on Landing</h1>
-          </Styled.Content>
-          <Styled.Content>
-            <h1>I'm Pricing Section on Landing</h1>
-          </Styled.Content>
-        </Route>
-      </Switch>
     </>
   );
 }
