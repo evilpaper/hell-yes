@@ -12,11 +12,8 @@ const Section = styled.section`
 
 const Body = styled.div`
   height: 90%;
-  // max-width: 1024px;
-  // margin-left: auto;
-  // margin-right: auto;
-  padding-left: 4%;
-  padding-right: 4%;
+  padding-left: 6%;
+  padding-right: 6%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

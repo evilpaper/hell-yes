@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const Body = styled.div`
-  padding-left: 4%;
-  padding-right: 4%;
+  padding-left: 6%;
+  padding-right: 6%;
   display: flex;
   flex-direction: column;
   justify-content: center;

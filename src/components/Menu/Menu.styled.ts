@@ -31,14 +31,16 @@ export const Content = styled.section`
 `;
 
 export const RouterNavLink = styled(NavLink)`
-  padding: 0 2em;
+  padding: 1em;
+  margin: 0 2em;
   text-decoration: none;
   cursor: pointer;
   font-weight: 500;
-  color: ${(props) => props.theme.color.greyLightest};
+  color: ${(props) => props.theme.color.white};
 
   &.${(props) => props.activeClassName} {
-    color: ${(props) => props.theme.color.white};
+    color: ${(props) => props.theme.color.primaryLight};
+    border-bottom: 4px solid ${(props) => props.theme.color.primaryLight};
   }
 `;
 
