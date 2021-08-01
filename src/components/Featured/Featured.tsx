@@ -11,11 +11,12 @@ const List = styled.ul`
   display: flex;
 
   padding-left: 6%;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
 
   scroll-snap-type: x mandatory;
+
+  z-index: 1000;
 `;
 
 const Card = styled.li`
@@ -28,6 +29,11 @@ const Card = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.2s all ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 export default function Featured() {

@@ -1,9 +1,9 @@
-import React, { useRef, useEffect } from "react";
+import React from "react";
 import bg from "assets/images/section-1-bg.jpg";
 import styled from "styled-components";
 
 const Section = styled.section`
-  height: 70vh;
+  height: 80vh;
   background-image: url(${bg});
   background-position: center;
   background-repeat: no-repeat;
@@ -14,6 +14,7 @@ const Body = styled.div`
   height: 90%;
   padding-left: 6%;
   padding-right: 6%;
+  padding-bottom: 6%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -68,17 +69,9 @@ export const Button = styled.button`
 `;
 
 export default function Hero() {
-  const bodyEl = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    // console.log(typeof bodyEl?.current?.getBoundingClientRect());
-    const left = bodyEl?.current?.getBoundingClientRect().left;
-    console.log(left);
-  }, []);
-
   return (
     <Section>
-      <Body ref={bodyEl}>
+      <Body>
         <Stack>
           <Title>Nail technical interviews</Title>
           <Subtitle>
