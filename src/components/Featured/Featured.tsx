@@ -1,22 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
-const Body = styled.div`
-  padding-left: 6%;
-  padding-right: 6%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`;
-
 const SectionHeading = styled.h2`
   font-weight: 600;
+  padding-left: 6%;
 `;
 
 const List = styled.ul`
   margin-top: 1rem;
   display: flex;
 
+  padding-left: 6%;
   overflow-x: auto;
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
@@ -38,7 +32,7 @@ const Card = styled.li`
 
 export default function Featured() {
   return (
-    <Body>
+    <>
       <SectionHeading>Featured decks</SectionHeading>
       <List>
         <Card>I'm a card</Card>
@@ -48,6 +42,6 @@ export default function Featured() {
         <Card>I'm a card</Card>
         <Card>I'm a card</Card>
       </List>
-    </Body>
+    </>
   );
 }
