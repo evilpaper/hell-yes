@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import img from "assets/images/card-bg.png";
 
 const SectionHeading = styled.h2`
   font-weight: 600;
@@ -9,22 +10,21 @@ const SectionHeading = styled.h2`
 const List = styled.ul`
   margin-top: 1rem;
   display: flex;
+  overflow-x: scroll;
 
   padding-left: 6%;
-  overflow-x: scroll;
-  -webkit-overflow-scrolling: touch;
 
   scroll-snap-type: x mandatory;
-
-  z-index: 1000;
 `;
 
 const Card = styled.li`
   min-width: 16rem;
   height: 20rem;
   border-radius: 1rem;
-  color: black;
-  background-color: white;
+  border: 4px solid dodgerblue;
+  color: white;
+  background-image: url(${img});
+  background-size: cover;
   margin-right: 2rem;
   display: flex;
   justify-content: center;
@@ -32,7 +32,7 @@ const Card = styled.li`
   transition: 0.2s all ease-in-out;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(0.9);
   }
 `;
 
