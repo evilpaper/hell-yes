@@ -73,12 +73,15 @@ export default function Hero() {
     <Section>
       <Body>
         <Stack>
-          <Title>Nail technical interviews</Title>
+          <Title>
+            Get Interview <br />
+            Ready Today
+          </Title>
           <Subtitle>
-            Flash cards for fast learning. Use our ready-made decks or create
-            your own. Try now, no account required.
+            Learn technical definitions and concepts fast. Try now, no account
+            required.
           </Subtitle>
-          <Button>Create your free account</Button>
+          <Button>See the decks</Button>
         </Stack>
       </Body>
     </Section>

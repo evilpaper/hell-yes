@@ -20,7 +20,7 @@ export default function Menu() {
             <Styled.Logo
               src={Logo}
               alt="Nailed It"
-              width="54px"
+              width="64px"
               height="auto"
               object-fit="cover"
             />

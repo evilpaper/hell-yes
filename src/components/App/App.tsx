@@ -5,10 +5,12 @@ import { theme } from "common/theme/theme";
 import Menu from "components/Menu/Menu";
 import Hero from "components/Hero/Hero";
 import Featured from "components/Featured/Featured";
+import Testamonial from "components/Testamonial/Testamonial";
 import Footer from "components/Footer/Footer";
 
 import styled from "styled-components";
 
+// This is only temporary to center placeholder components
 export const Content = styled.section`
   width: 100%;
   height: 100vh;
@@ -41,9 +43,7 @@ export default function App() {
           <Route path="/">
             <Hero />
             <Featured />
-            <Content>
-              <h1>I'm Testamonial Section on Landing</h1>
-            </Content>
+            <Testamonial />
             <Content>
               <h1>I'm Pricing Section on Landing</h1>
             </Content>
