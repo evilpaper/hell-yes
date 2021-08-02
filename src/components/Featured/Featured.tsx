@@ -19,7 +19,7 @@ const List = styled.ul`
 
 const Card = styled.li`
   min-width: 16rem;
-  height: 20rem;
+  height: 22rem;
   border-radius: 1rem;
   border: 4px solid dodgerblue;
   color: white;

@@ -29,6 +29,8 @@ export const RouterNavLink = styled(NavLink)`
   cursor: pointer;
   font-weight: 500;
   color: ${(props) => props.theme.color.white};
+  transition: 0.2s border-bottom ease-in;
+  border-bottom: 4px solid transparent;
 
   &.${(props) => props.activeClassName} {
     color: ${(props) => props.theme.color.primaryLight};
