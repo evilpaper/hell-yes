@@ -21,7 +21,6 @@ export default function Footer() {
       <CopyrightFolio>
         Copyright © {year} Hell Yes | All Rights Reserved
       </CopyrightFolio>
-      ;
       <LegalLinksFolio>
         Terms of service | Privacy Policy | Cookies
       </LegalLinksFolio>

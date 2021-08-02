@@ -11,7 +11,7 @@ const Section = styled.section`
 `;
 
 const Body = styled.div`
-  height: 90%;
+  height: 100%;
   padding-left: 6%;
   padding-right: 6%;
   padding-bottom: 6%;

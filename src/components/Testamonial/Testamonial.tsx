@@ -6,7 +6,7 @@ import testUser2 from "assets/images/test-user-2.jpeg";
 import testUser3 from "assets/images/test-user-3.jpeg";
 
 const Body = styled.div`
-  margin-top: 1rem;
+  margin-top: 6rem;
   padding-left: 6%;
   padding-right: 6%;
   padding-bottom: 6%;
@@ -16,8 +16,12 @@ const Body = styled.div`
 `;
 
 const Block = styled.blockquote`
-  padding: 2rem;
   flex: 1;
+  padding: 2rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 `;
 
 const Qoute = styled.p`
