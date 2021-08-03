@@ -32,9 +32,7 @@ export default function App() {
             </Content>
           </Route>
           <Route exact path="/pricing">
-            <Content>
-              <h1>I'm Pricing</h1>
-            </Content>
+            <PricingPlans />
           </Route>
           <Route exact path="/about">
             <Content>

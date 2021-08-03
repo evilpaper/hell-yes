@@ -23,6 +23,9 @@ const Plans = styled.ul`
 
 const Plan = styled.li`
   padding: 2rem;
+  margin: 1rem;
+  border: 2px solid ${(props) => props.theme.color.primaryLight};
+  border-radius: 1rem;
 `;
 
 const PlanHeading = styled.h1`
@@ -55,7 +58,7 @@ const CTA = styled.button`
 
 const PlanContent = styled.li`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-top: 1rem;
 `;
 
@@ -63,10 +66,14 @@ const ContentTextBlock = styled.div`
   margin-left: 1rem;
 `;
 
+const USP = styled.p`
+  line-height: 1;
+`;
+
 export default function PricingPlans() {
   return (
     <Body>
-      <Heading>Create your own deck. Select your plan.</Heading>
+      <Heading>Create your own decks. Select your plan.</Heading>
       <Plans>
         <Plan>
           <PlanHeading>Base</PlanHeading>
@@ -74,13 +81,13 @@ export default function PricingPlans() {
             <PlanContent>
               <Check />
               <ContentTextBlock>
-                <p>Study unlimited decks</p>
+                <USP>Study unlimited decks</USP>
               </ContentTextBlock>
             </PlanContent>
             <PlanContent>
               <Check />
               <ContentTextBlock>
-                <p>Create up to 3 custom decks</p>
+                <USP>Create up to 3 custom decks</USP>
               </ContentTextBlock>
             </PlanContent>
           </ul>
@@ -93,13 +100,13 @@ export default function PricingPlans() {
             <PlanContent>
               <Check />
               <ContentTextBlock>
-                <p>Study unlimited decks</p>
+                <USP>Study unlimited decks</USP>
               </ContentTextBlock>
             </PlanContent>
             <PlanContent>
               <Check />
               <ContentTextBlock>
-                <p>Create unlimited custom decks</p>
+                <USP>Create unlimited custom decks</USP>
               </ContentTextBlock>
             </PlanContent>
           </ul>
