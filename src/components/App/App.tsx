@@ -6,6 +6,7 @@ import Menu from "components/Menu/Menu";
 import Hero from "components/Hero/Hero";
 import Featured from "components/Featured/Featured";
 import Testamonial from "components/Testamonial/Testamonial";
+import PricingPlans from "components/PricingPlans/PricingPlans";
 import Footer from "components/Footer/Footer";
 
 import styled from "styled-components";
@@ -44,9 +45,7 @@ export default function App() {
             <Hero />
             <Featured />
             <Testamonial />
-            <Content>
-              <h1>I'm Pricing Section on Landing</h1>
-            </Content>
+            <PricingPlans />
           </Route>
         </Switch>
         <Footer />

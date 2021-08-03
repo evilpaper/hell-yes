@@ -59,8 +59,8 @@ export default function Testamonial() {
           <AuthorImage
             src={testUser1}
             alt="testamonial author"
-            width="56px"
-            height="56px"
+            width="48px"
+            height="48px"
             object-fit="cover"
           />
           <div>
@@ -76,8 +76,8 @@ export default function Testamonial() {
           <AuthorImage
             src={testUser2}
             alt="testamonial author"
-            width="56px"
-            height="56px"
+            width="48px"
+            height="48px"
             object-fit="cover"
           />
           <div>
@@ -93,8 +93,8 @@ export default function Testamonial() {
           <AuthorImage
             src={testUser3}
             alt="testamonial author"
-            width="56px"
-            height="56px"
+            width="48px"
+            height="48px"
             object-fit="cover"
           />
           <div>
