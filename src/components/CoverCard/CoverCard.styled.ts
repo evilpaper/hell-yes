@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import img from "assets/images/card-bg.png";
+import img from "assets/images/css-card-bg.jpg";
 
 export const CoverCard = styled.li`
   min-width: 16rem;

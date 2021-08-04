@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import CoverCard from "components/CoverCard/CoverCard";
 import styled from "styled-components";
 
@@ -22,7 +23,9 @@ export default function Featured() {
     <>
       <SectionHeading>Featured decks</SectionHeading>
       <List>
-        <CoverCard />
+        <Link to="deck/typescript">
+          <CoverCard />
+        </Link>
         <CoverCard />
         <CoverCard />
         <CoverCard />
