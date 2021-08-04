@@ -78,8 +78,8 @@ export default function Hero() {
             Ready Today
           </Title>
           <Subtitle>
-            Learn technical definitions and concepts fast. Try now, no account
-            required.
+            Memorise technical definitions and concepts fast with flash cards.
+            Try now, no account required.
           </Subtitle>
           <Button>See the decks</Button>
         </Stack>
