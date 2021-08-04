@@ -1,13 +1,25 @@
 import styled from "styled-components";
-import img from "assets/images/css-card-bg.jpg";
 
-export const CoverCard = styled.li`
+interface ICoverCard {
+  bgImgUrl: string;
+  borderColor: string;
+}
+
+interface ITitle {
+  textColor: string;
+}
+
+interface IStudyTime {
+  textColor: string;
+}
+
+export const CoverCard = styled.li<ICoverCard>`
   min-width: 16rem;
   height: 22rem;
   border-radius: 1rem;
-  border: 4px solid dodgerblue;
+  border: 2px solid ${(props) => props.borderColor};
   color: white;
-  background-image: url(${img});
+  background-image: url(${(props) => props.bgImgUrl});
   background-size: cover;
   margin-right: 2rem;
   padding: 2rem;
@@ -19,13 +31,13 @@ export const CoverCard = styled.li`
   }
 `;
 
-export const Title = styled.h1`
-  color: ${(props) => props.theme.color.white};
+export const Title = styled.h1<ITitle>`
+  color: ${(props) => props.textColor};
   font-weight: 700;
   font-size: 1.6em;
 `;
 
-export const StudyTime = styled.p`
-  color: ${(props) => props.theme.color.white};
+export const StudyTime = styled.p<IStudyTime>`
+  color: ${(props) => props.textColor};
   opacity: 0.7;
 `;

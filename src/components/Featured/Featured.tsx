@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import CoverCard from "components/CoverCard/CoverCard";
 import styled from "styled-components";
+import { DECKS } from "constants/DECKS";
 
 const SectionHeading = styled.h2`
   font-weight: 600;
@@ -19,22 +20,23 @@ const List = styled.ul`
 `;
 
 export default function Featured() {
+  const decks = DECKS || [];
+
   return (
     <>
       <SectionHeading>Featured decks</SectionHeading>
+
       <List>
-        <Link to="deck/typescript">
-          <CoverCard />
-        </Link>
-        <CoverCard />
-        <CoverCard />
-        <CoverCard />
-        <CoverCard />
-        <CoverCard />
-        <CoverCard />
-        <CoverCard />
-        <CoverCard />
-        <CoverCard />
+        {" "}
+        {decks.map((deck) => (
+          <CoverCard
+            key={deck.id}
+            name={deck.name}
+            bgImgUrl={deck.bgImgUrl}
+            textColor={deck.textColor}
+            borderColor={deck.borderColor}
+          />
+        ))}
       </List>
     </>
   );

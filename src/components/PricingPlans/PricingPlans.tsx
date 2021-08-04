@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Icon from "assets/images/check.png";
 import { ReactComponent as Check } from "assets/images/check.svg";
 
 const Body = styled.div`
