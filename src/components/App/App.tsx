@@ -2,12 +2,9 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import { theme } from "common/theme/theme";
-import Menu from "components/Menu/Menu";
-import Hero from "components/Hero/Hero";
-import Featured from "components/Featured/Featured";
-import Testamonial from "components/Testamonial/Testamonial";
+import Home from "components/Home/Home";
 import PricingPlans from "components/PricingPlans/PricingPlans";
-import Footer from "components/Footer/Footer";
+import PublicRoute from "components/PublicRoute/PublicRoute";
 
 import styled from "styled-components";
 
@@ -24,29 +21,17 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <Menu />
         <Switch>
-          <Route exact path="/decks">
+          <PublicRoute exact path="/" component={Home} />
+          <PublicRoute exact path="/decks" component={PricingPlans} />
+          <PublicRoute exact path="/pricing" component={PricingPlans} />
+          <PublicRoute exact path="/about" component={PricingPlans} />
+          <Route exact path="/deck/:id">
             <Content>
-              <h1>I'm Decks</h1>
+              <h1>I'm deck</h1>
             </Content>
-          </Route>
-          <Route exact path="/pricing">
-            <PricingPlans />
-          </Route>
-          <Route exact path="/about">
-            <Content>
-              <h1>I'm About</h1>
-            </Content>
-          </Route>
-          <Route path="/">
-            <Hero />
-            <Featured />
-            <Testamonial />
-            <PricingPlans />
           </Route>
         </Switch>
-        <Footer />
       </BrowserRouter>
     </ThemeProvider>
   );
