@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "common/theme/theme";
 import Home from "components/Home/Home";
 import PricingPlans from "components/PricingPlans/PricingPlans";
-import PublicRoute from "components/PublicRoute/PublicRoute";
+import RouterWithMenu from "components/RouterWithMenu/RouteWithMenu";
 
 import styled from "styled-components";
 
@@ -22,10 +22,10 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Switch>
-          <PublicRoute exact path="/" component={Home} />
-          <PublicRoute exact path="/decks" component={PricingPlans} />
-          <PublicRoute exact path="/pricing" component={PricingPlans} />
-          <PublicRoute exact path="/about" component={PricingPlans} />
+          <RouterWithMenu exact path="/" component={Home} />
+          <RouterWithMenu exact path="/decks" component={PricingPlans} />
+          <RouterWithMenu exact path="/pricing" component={PricingPlans} />
+          <RouterWithMenu exact path="/about" component={PricingPlans} />
           <Route exact path="/deck/:id">
             <Content>
               <h1>I'm deck</h1>

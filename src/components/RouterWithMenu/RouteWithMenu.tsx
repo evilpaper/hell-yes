@@ -9,7 +9,10 @@ interface Props {
   path: string;
 }
 
-export default function PublicRoute({ component: Component, ...rest }: Props) {
+export default function RouteWithMenu({
+  component: Component,
+  ...rest
+}: Props) {
   return (
     <Route
       {...rest}
