@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import CoverCard from "components/CoverCard/CoverCard";
 import styled from "styled-components";
 import { DECKS } from "constants/DECKS";
@@ -29,13 +29,15 @@ export default function Featured() {
       <List>
         {" "}
         {decks.map((deck) => (
-          <CoverCard
-            key={deck.id}
-            name={deck.name}
-            bgImgUrl={deck.bgImgUrl}
-            textColor={deck.textColor}
-            borderColor={deck.borderColor}
-          />
+          <Link to={`/deck/${deck.id}`}>
+            <CoverCard
+              key={deck.id}
+              name={deck.name}
+              bgImgUrl={deck.bgImgUrl}
+              textColor={deck.textColor}
+              borderColor={deck.borderColor}
+            />
+          </Link>
         ))}
       </List>
     </>
