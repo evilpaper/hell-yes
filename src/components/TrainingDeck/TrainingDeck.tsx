@@ -1,7 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import CoverCard from "components/CoverCard/CoverCard";
 import styled from "styled-components";
+import { DECKS } from "constants/DECKS";
+import { WatchDirectoryKind } from "typescript";
 
 // This is only temporary to center placeholder components
 export const Content = styled.section`
@@ -12,13 +14,42 @@ export const Content = styled.section`
   align-items: center;
 `;
 
+const defaultDeck = {
+  name: "Default",
+  bgImgUrl: "Default",
+  borderColor: "Default",
+  textColor: "Default",
+};
+
+type Deck = {
+  name: string;
+  bgImgUrl: string;
+  borderColor: string;
+  textColor: string;
+};
+
+type DeckParams = {
+  id: string;
+};
+
 export default function TrainingDeck() {
-  const params = useParams();
-  console.log(params);
-  useEffect(() => {});
+  const [deck, setDeck] = useState<Deck>(defaultDeck);
+  const params = useParams<DeckParams>();
+  const { id } = params;
+
+  useEffect(() => {
+    const currentDeck = DECKS.filter((deck) => deck.id === id);
+    setDeck(currentDeck[0]);
+  }, []);
+
   return (
     <Content>
-      <h1>I'm a deck in training mode.</h1>
+      <CoverCard
+        name={deck.name}
+        bgImgUrl={deck.bgImgUrl}
+        textColor={deck.textColor}
+        borderColor={deck.borderColor}
+      />
     </Content>
   );
 }
