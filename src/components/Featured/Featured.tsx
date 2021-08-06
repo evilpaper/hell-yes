@@ -19,6 +19,10 @@ const List = styled.ul`
   scroll-snap-type: x mandatory;
 `;
 
+const ListItem = styled.li`
+  margin-right: 2rem;
+`;
+
 export default function Featured() {
   const decks = DECKS || [];
 
@@ -29,14 +33,16 @@ export default function Featured() {
       <List>
         {" "}
         {decks.map((deck) => (
-          <Link to={`/deck/${deck.id}`} key={deck.id}>
-            <CoverCard
-              name={deck.name}
-              bgImgUrl={deck.bgImgUrl}
-              textColor={deck.textColor}
-              borderColor={deck.borderColor}
-            />
-          </Link>
+          <ListItem key={deck.id}>
+            <Link to={`/deck/${deck.id}`}>
+              <CoverCard
+                name={deck.name}
+                bgImgUrl={deck.bgImgUrl}
+                textColor={deck.textColor}
+                borderColor={deck.borderColor}
+              />
+            </Link>
+          </ListItem>
         ))}
       </List>
     </>

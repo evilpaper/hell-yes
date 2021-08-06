@@ -13,7 +13,7 @@ interface IStudyTime {
   textColor: string;
 }
 
-export const CoverCard = styled.li<ICoverCard>`
+export const CoverCard = styled.div<ICoverCard>`
   min-width: 16rem;
   height: 22rem;
   border-radius: 1rem;
@@ -21,7 +21,6 @@ export const CoverCard = styled.li<ICoverCard>`
   color: white;
   background-image: url(${(props) => props.bgImgUrl});
   background-size: cover;
-  margin-right: 2rem;
   padding: 2rem;
 
   transition: 0.2s all ease-in-out;

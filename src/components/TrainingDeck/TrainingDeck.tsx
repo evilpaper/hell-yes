@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import CoverCard from "components/CoverCard/CoverCard";
 import styled from "styled-components";
 import { DECKS } from "constants/DECKS";
-import { WatchDirectoryKind } from "typescript";
 
 // This is only temporary to center placeholder components
 export const Content = styled.section`
@@ -40,7 +39,7 @@ export default function TrainingDeck() {
   useEffect(() => {
     const currentDeck = DECKS.filter((deck) => deck.id === id);
     setDeck(currentDeck[0]);
-  }, []);
+  }, [id]);
 
   return (
     <Content>

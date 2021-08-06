@@ -1,4 +1,4 @@
-import React, { ReactComponentElement } from "react";
+import React from "react";
 import { Route } from "react-router-dom";
 import Menu from "components/Menu/Menu";
 import Footer from "components/Footer/Footer";
