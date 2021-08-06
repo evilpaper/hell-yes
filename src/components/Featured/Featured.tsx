@@ -29,9 +29,8 @@ export default function Featured() {
       <List>
         {" "}
         {decks.map((deck) => (
-          <Link to={`/deck/${deck.id}`}>
+          <Link to={`/deck/${deck.id}`} key={deck.id}>
             <CoverCard
-              key={deck.id}
               name={deck.name}
               bgImgUrl={deck.bgImgUrl}
               textColor={deck.textColor}
