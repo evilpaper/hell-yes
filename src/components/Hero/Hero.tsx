@@ -1,5 +1,5 @@
 import React from "react";
-import bg from "assets/images/section-1-bg.jpg";
+import bg from "assets/images/home-bg-cred-roman-mager.jpg";
 import styled from "styled-components";
 
 const Section = styled.section`
