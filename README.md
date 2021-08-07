@@ -1,3 +1,11 @@
+
+
+# Hell Yes 
+
+A juicy app for splitting bills and share costs with friends.  
+
+[Try it out here](https://evilpaper.com/splitbill/)
+
 # How I worked on this project
 
 # How to navigate this project
@@ -7,6 +15,15 @@
 # If I had more time I would change this
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Built with
+Technology close to the metal i.e HTML, CSS and JavaScript. The metal = the browser in this case :).
+
+## Contributions
+Contributions are welcome. Issues are for bugs only.
+
+## Licensing
+Do whatever you want with the code. The design is property of Johny vino™.
 
 ## Available Scripts
 
