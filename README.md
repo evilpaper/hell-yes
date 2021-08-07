@@ -7,7 +7,7 @@ A flash card app for memorizing things.
 
 ## How I worked on this project
 - Inital design and graphical assets are made in Figma. Link ...
-- Task breakdown isbased on design and things that came up during development and testing.
+- Task breakdown based on design and things that came up during development and testing.
 - Each bigger block are developed in a feature branch.
 
 ## How to navigate this project
