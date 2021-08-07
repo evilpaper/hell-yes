@@ -2,28 +2,39 @@
 
 # Hell Yes 
 
-A juicy app for splitting bills and share costs with friends.  
+A flash card app for memorizing things.  
 
 [Try it out here](https://evilpaper.com/splitbill/)
 
 # How I worked on this project
+- Inital design and graphical assets are made in Figma. Link ...
+- Task breakdown isbased on design and things that came up during development and testing.
+- Each bigger block are developed in a feature branch.
 
 # How to navigate this project
+- The project is structured in modules. Modules resemble routes more or less.
+- Responsive CSS using styled components.
+- Animation using Framer Motion and some plain CSS tranistions when Framer Motion felt overkill.
+- Only local storage for now. Backend is planned for later.
+- Integration test using React Testing Libraries
 
 # Why I built the project this way
+- Didn't use a state management like Redux on purpose. Built in useState and useContext is more than sufficient.
+- Styled components is a great library for stylling.
+- I wanted to explore Framer Motion for animations and come as close as possible to animation seen in native mobile apps. Considered using react-spring as well but settled for Framer Motion in this project.
+- Testing is an essential of production applications. Testing Library is at the momemnt of writing the go-to library in the React community. All essential features are covered with tests. 
 
 # If I had more time I would change this
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Nothing yet, will most likely change.
 
 ## Built with
-Technology close to the metal i.e HTML, CSS and JavaScript. The metal = the browser in this case :).
+React with TypeScriipt.
 
 ## Contributions
 Contributions are welcome. Issues are for bugs only.
 
 ## Licensing
-Do whatever you want with the code. The design is property of Johny vino™.
+Do whatever you want with the code.
 
 ## Available Scripts
 
