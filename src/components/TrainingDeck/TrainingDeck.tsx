@@ -37,18 +37,13 @@ export default function TrainingDeck() {
   const { id } = params;
 
   useEffect(() => {
-    const currentDeck = DECKS.filter((deck) => deck.id === id);
-    setDeck(currentDeck[0]);
+    const filteredDecks = DECKS.filter((deck) => deck.id === id);
+    const [current] = filteredDecks || [];
+    setDeck(current);
   }, [id]);
 
   return (
     <Content>
-      <CoverCard
-        name={deck.name}
-        bgImgUrl={deck.bgImgUrl}
-        textColor={deck.textColor}
-        borderColor={deck.borderColor}
-      />
       <CoverCard
         name={deck.name}
         bgImgUrl={deck.bgImgUrl}
