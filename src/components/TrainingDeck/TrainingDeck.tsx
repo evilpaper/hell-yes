@@ -49,6 +49,12 @@ export default function TrainingDeck() {
         textColor={deck.textColor}
         borderColor={deck.borderColor}
       />
+      <CoverCard
+        name={deck.name}
+        bgImgUrl={deck.bgImgUrl}
+        textColor={deck.textColor}
+        borderColor={deck.borderColor}
+      />
     </Content>
   );
 }
