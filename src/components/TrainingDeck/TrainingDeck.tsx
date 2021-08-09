@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import CoverCard from "components/CoverCard/CoverCard";
 import styled from "styled-components";
 import { DECKS } from "constants/DECKS";
+import { stringify } from "querystring";
 
 // This is only temporary to center placeholder components
 export const Content = styled.section`
@@ -13,43 +14,43 @@ export const Content = styled.section`
   align-items: center;
 `;
 
-const defaultDeck = {
-  name: "Default",
-  bgImgUrl: "Default",
-  borderColor: "Default",
-  textColor: "Default",
-};
-
-type Deck = {
+interface IDeck {
   name: string;
   bgImgUrl: string;
   borderColor: string;
   textColor: string;
-};
+  cards?: { term: string }[];
+}
+
+interface ICardItem {
+  term: string;
+}
+
+interface ICardItems extends Array<ICardItem> {}
 
 type DeckParams = {
   id: string;
 };
 
 export default function TrainingDeck() {
-  const [deck, setDeck] = useState<Deck>(defaultDeck);
+  const [deck, setDeck] = useState<IDeck | {}>({});
+  const [cards, setCards] = useState<ICardItems | []>([]);
   const params = useParams<DeckParams>();
   const { id } = params;
 
   useEffect(() => {
     const filteredDecks = DECKS.filter((deck) => deck.id === id);
-    const [current] = filteredDecks || [];
-    setDeck(current);
+    const [currentDeck] = filteredDecks || [];
+    const { cards: currentCards = [] } = currentDeck;
+    setCards(currentCards);
+    setDeck(currentDeck);
   }, [id]);
 
   return (
     <Content>
-      <CoverCard
-        name={deck.name}
-        bgImgUrl={deck.bgImgUrl}
-        textColor={deck.textColor}
-        borderColor={deck.borderColor}
-      />
+      {cards.map((card) => {
+        return null;
+      })}
     </Content>
   );
 }
