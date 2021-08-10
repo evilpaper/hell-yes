@@ -17,12 +17,12 @@ type DeckParams = {
 
 // This is only temporary to center placeholder components
 export const Content = styled.section`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
+  padding: 3rem;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 16rem));
   justify-content: center;
-  align-items: center;
+  align-content: center;
 `;
 
 export const Card = styled.div<any>`
