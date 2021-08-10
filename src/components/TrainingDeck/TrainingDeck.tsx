@@ -1,19 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import CoverCard from "components/CoverCard/CoverCard";
 import styled from "styled-components";
 import { DECKS } from "constants/DECKS";
 
-interface IDeck {
-  name: string;
-  bgImgUrl: string;
-  borderColor: string;
-  textColor: string;
-  cards?: { term: string }[];
-}
-
 interface ICardItem {
   term: string;
+  bgImgUrl: string;
+  borderColor: string;
 }
 
 interface ICardItems extends Array<ICardItem> {}
@@ -50,23 +43,26 @@ export const Card = styled.div<any>`
 `;
 
 export default function TrainingDeck() {
-  const [deck, setDeck] = useState<IDeck | {}>({});
   const [cards, setCards] = useState<ICardItems | []>([]);
   const params = useParams<DeckParams>();
   const { id } = params;
 
   useEffect(() => {
-    const filteredDecks = DECKS.filter((deck) => deck.id === id);
-    const [currentDeck] = filteredDecks || [];
-    const { cards: currentCards = [] } = currentDeck;
-    setCards(currentCards);
-    setDeck(currentDeck);
+    const [selectedDeck] = DECKS.filter((deck) => deck.id === id);
+    const { cards: cardsFromDeck = [] } = selectedDeck;
+    setCards(cardsFromDeck);
   }, [id]);
 
   return (
     <Content>
       {cards.map((card, index) => (
-        <Card key={index}>{card.term}</Card>
+        <Card
+          key={index}
+          bgImgUrl={card.bgImgUrl}
+          borderColor={card.borderColor}
+        >
+          {card.term}
+        </Card>
       ))}
     </Content>
   );

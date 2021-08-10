@@ -23,6 +23,8 @@ export const DECKS = [
         nailed: false,
         flipped: false,
         orderSequence: 1,
+        bgImgUrl: ReactBgUrl,
+        borderColor: "hsl(199, 90%, 57%)",
       },
       {
         id: nanoid(),
@@ -32,6 +34,8 @@ export const DECKS = [
         nailed: false,
         flipped: false,
         orderSequence: 2,
+        bgImgUrl: ReactBgUrl,
+        borderColor: "hsl(199, 90%, 57%)",
       },
       {
         id: nanoid(),
@@ -41,6 +45,8 @@ export const DECKS = [
         nailed: false,
         flipped: false,
         orderSequence: 3,
+        bgImgUrl: ReactBgUrl,
+        borderColor: "hsl(199, 90%, 57%)",
       },
       {
         id: nanoid(),
@@ -50,6 +56,8 @@ export const DECKS = [
         nailed: false,
         flipped: false,
         orderSequence: 4,
+        bgImgUrl: ReactBgUrl,
+        borderColor: "hsl(199, 90%, 57%)",
       },
       {
         id: nanoid(),
@@ -59,6 +67,8 @@ export const DECKS = [
         nailed: false,
         flipped: false,
         orderSequence: 5,
+        bgImgUrl: ReactBgUrl,
+        borderColor: "hsl(199, 90%, 57%)",
       },
       {
         id: nanoid(),
@@ -68,6 +78,8 @@ export const DECKS = [
         nailed: false,
         flipped: false,
         orderSequence: 6,
+        bgImgUrl: ReactBgUrl,
+        borderColor: "hsl(199, 90%, 57%)",
       },
       {
         id: nanoid(),
@@ -77,6 +89,8 @@ export const DECKS = [
         nailed: false,
         flipped: false,
         orderSequence: 7,
+        bgImgUrl: ReactBgUrl,
+        borderColor: "hsl(199, 90%, 57%)",
       },
       {
         id: nanoid(),
@@ -86,6 +100,8 @@ export const DECKS = [
         nailed: false,
         flipped: false,
         orderSequence: 8,
+        bgImgUrl: ReactBgUrl,
+        borderColor: "hsl(199, 90%, 57%)",
       },
       {
         id: nanoid(),
@@ -95,6 +111,8 @@ export const DECKS = [
         nailed: false,
         flipped: false,
         orderSequence: 9,
+        bgImgUrl: ReactBgUrl,
+        borderColor: "hsl(199, 90%, 57%)",
       },
       {
         id: nanoid(),
@@ -104,6 +122,8 @@ export const DECKS = [
         nailed: false,
         flipped: false,
         orderSequence: 10,
+        bgImgUrl: ReactBgUrl,
+        borderColor: "hsl(199, 90%, 57%)",
       },
     ],
   },
