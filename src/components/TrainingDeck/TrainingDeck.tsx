@@ -3,16 +3,6 @@ import { useParams } from "react-router-dom";
 import CoverCard from "components/CoverCard/CoverCard";
 import styled from "styled-components";
 import { DECKS } from "constants/DECKS";
-import { stringify } from "querystring";
-
-// This is only temporary to center placeholder components
-export const Content = styled.section`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
 
 interface IDeck {
   name: string;
@@ -32,6 +22,33 @@ type DeckParams = {
   id: string;
 };
 
+// This is only temporary to center placeholder components
+export const Content = styled.section`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Card = styled.div<any>`
+  min-width: 16rem;
+  height: 22rem;
+  border-radius: 1rem;
+  border: 2px solid ${(props) => props.borderColor};
+  color: white;
+  background-image: url(${(props) => props.bgImgUrl});
+  background-size: cover;
+  padding: 2rem;
+
+  transition: 0.2s all ease-in-out;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+`;
+
 export default function TrainingDeck() {
   const [deck, setDeck] = useState<IDeck | {}>({});
   const [cards, setCards] = useState<ICardItems | []>([]);
@@ -48,9 +65,9 @@ export default function TrainingDeck() {
 
   return (
     <Content>
-      {cards.map((card) => {
-        return null;
-      })}
+      {cards.map((card, index) => (
+        <Card key={index}>{card.term}</Card>
+      ))}
     </Content>
   );
 }
