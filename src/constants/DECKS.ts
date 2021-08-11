@@ -135,6 +135,18 @@ export const DECKS = [
     bgImgUrl: JavaScriptBgUrl,
     borderColor: "hsl(52, 96%, 88%)",
     textColor: "black",
+    cards: [
+      {
+        id: nanoid(),
+        term: "Term",
+        definition: "Definition",
+        nailed: false,
+        flipped: false,
+        orderSequence: 1,
+        bgImgUrl: JavaScriptBgUrl,
+        borderColor: "hsl(52, 96%, 88%)",
+      },
+    ],
   },
   {
     name: "TypeScript",
@@ -143,6 +155,18 @@ export const DECKS = [
     bgImgUrl: TypeScriptBgUrl,
     borderColor: "hsl(199, 90%, 57%)",
     textColor: "white",
+    cards: [
+      {
+        id: nanoid(),
+        term: "Term",
+        definition: "Definition",
+        nailed: false,
+        flipped: false,
+        orderSequence: 1,
+        bgImgUrl: TypeScriptBgUrl,
+        borderColor: "hsl(199, 90%, 57%)",
+      },
+    ],
   },
   {
     name: "Next.js",
@@ -151,6 +175,18 @@ export const DECKS = [
     bgImgUrl: NextJSBgUrl,
     borderColor: "hsl(250, 18%, 17%)",
     textColor: "white",
+    cards: [
+      {
+        id: nanoid(),
+        term: "Term",
+        definition: "Definition",
+        nailed: false,
+        flipped: false,
+        orderSequence: 1,
+        bgImgUrl: NextJSBgUrl,
+        borderColor: "hsl(250, 18%, 17%)",
+      },
+    ],
   },
   {
     name: "Bash",
@@ -159,6 +195,18 @@ export const DECKS = [
     bgImgUrl: BashBgUrl,
     borderColor: "hsl(206, 15%, 40%)",
     textColor: "white",
+    cards: [
+      {
+        id: nanoid(),
+        term: "Term",
+        definition: "Definition",
+        nailed: false,
+        flipped: false,
+        orderSequence: 1,
+        bgImgUrl: BashBgUrl,
+        borderColor: "hsl(206, 15%, 40%)",
+      },
+    ],
   },
   {
     name: "CSS",
@@ -167,5 +215,17 @@ export const DECKS = [
     bgImgUrl: CSSBgUrl,
     borderColor: "hsl(157, 92%, 82%)",
     textColor: "black",
+    cards: [
+      {
+        id: nanoid(),
+        term: "Term",
+        definition: "Definition",
+        nailed: false,
+        flipped: false,
+        orderSequence: 1,
+        bgImgUrl: CSSBgUrl,
+        borderColor: "hsl(157, 92%, 82%)",
+      },
+    ],
   },
 ];
