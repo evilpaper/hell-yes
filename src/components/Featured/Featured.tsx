@@ -34,7 +34,7 @@ export default function Featured() {
         {" "}
         {decks.map((deck) => (
           <ListItem key={deck.id}>
-            <Link to={`/deck/${deck.id}`}>
+            <Link to={`/deck/${deck.routeID}`}>
               <CoverCard
                 name={deck.name}
                 bgImgUrl={deck.bgImgUrl}

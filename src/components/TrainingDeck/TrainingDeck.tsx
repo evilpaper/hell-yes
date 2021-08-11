@@ -48,7 +48,7 @@ export default function TrainingDeck() {
   const { id } = params;
 
   useEffect(() => {
-    const [selectedDeck] = DECKS.filter((deck) => deck.id === id);
+    const [selectedDeck] = DECKS.filter((deck) => deck.routeID === id);
     const { cards: cardsFromDeck = [] } = selectedDeck;
     setCards(cardsFromDeck);
   }, [id]);
