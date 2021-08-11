@@ -29,7 +29,6 @@ export default function Featured() {
   return (
     <>
       <SectionHeading>Featured decks</SectionHeading>
-
       <List>
         {" "}
         {decks.map((deck) => (
