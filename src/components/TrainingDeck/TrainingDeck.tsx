@@ -15,6 +15,10 @@ type DeckParams = {
   id: string;
 };
 
+interface IHeader {
+  textColor: string;
+}
+
 // This is only temporary to center placeholder components
 export const Content = styled.section`
   padding: 3rem;
@@ -42,6 +46,12 @@ export const Card = styled.div<any>`
   }
 `;
 
+export const Header = styled.h1<IHeader>`
+  color: ${(props) => props.textColor};
+  font-weight: 700;
+  font-size: 1.6em;
+`;
+
 export default function TrainingDeck() {
   const [cards, setCards] = useState<ICardItems | []>([]);
   const params = useParams<DeckParams>();
@@ -61,7 +71,7 @@ export default function TrainingDeck() {
           bgImgUrl={card.bgImgUrl}
           borderColor={card.borderColor}
         >
-          {card.term}
+          <Header textColor={"white"}>{card.term}</Header>
         </Card>
       ))}
     </Content>
