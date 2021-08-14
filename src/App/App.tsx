@@ -8,17 +8,6 @@ import TrainingDeck from "components/TrainingDeck/TrainingDeck";
 import RouterWithMenu from "components/RouterWithMenu/RouteWithMenu";
 import Featured from "components/Featured/Featured";
 
-import styled from "styled-components";
-
-// This is only temporary to center placeholder components
-export const Content = styled.section`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
 export default function App() {
   return (
     <ThemeProvider theme={theme}>
