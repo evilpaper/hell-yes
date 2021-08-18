@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "assets/images/logo.png";
-import Burger from "components/Burger/Burger";
+import Burger from "modules/common/components/Burger/Burger";
 
 import * as Styled from "./Menu.styled";
 
