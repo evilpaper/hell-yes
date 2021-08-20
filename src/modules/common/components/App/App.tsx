@@ -6,7 +6,7 @@ import Home from "components/Home/Home";
 import PricingPlans from "components/PricingPlans/PricingPlans";
 import TrainingDeck from "components/TrainingDeck/TrainingDeck";
 import RouterWithMenu from "components/RouterWithMenu/RouteWithMenu";
-import Featured from "components/Featured/Featured";
+import Decks from "modules/decks/components/decks/decks";
 
 export default function App() {
   return (
@@ -14,7 +14,7 @@ export default function App() {
       <BrowserRouter>
         <Switch>
           <RouterWithMenu exact path="/" component={Home} />
-          <RouterWithMenu exact path="/decks" component={Featured} />
+          <RouterWithMenu exact path="/decks" component={Decks} />
           <RouterWithMenu exact path="/pricing" component={PricingPlans} />
           <RouterWithMenu exact path="/about" component={PricingPlans} />
           <Route exact path="/deck/:id">
