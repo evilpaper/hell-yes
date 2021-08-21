@@ -6,7 +6,8 @@ import Home from "components/Home/Home";
 import PricingPlans from "components/PricingPlans/PricingPlans";
 import TrainingDeck from "components/TrainingDeck/TrainingDeck";
 import RouterWithMenu from "components/RouterWithMenu/RouteWithMenu";
-import Decks from "modules/decks/components/decks/decks";
+import Decks from "modules/decks/components/decks/Decks";
+import About from "modules/about/components/About";
 
 export default function App() {
   return (
@@ -16,7 +17,7 @@ export default function App() {
           <RouterWithMenu exact path="/" component={Home} />
           <RouterWithMenu exact path="/decks" component={Decks} />
           <RouterWithMenu exact path="/pricing" component={PricingPlans} />
-          <RouterWithMenu exact path="/about" component={PricingPlans} />
+          <RouterWithMenu exact path="/about" component={About} />
           <Route exact path="/deck/:id">
             <TrainingDeck />
           </Route>

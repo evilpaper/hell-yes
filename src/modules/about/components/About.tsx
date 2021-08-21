@@ -13,10 +13,10 @@ const Heading = styled.h1`
   text-align: center;
 `;
 
-export default function Decks() {
+export default function About() {
   return (
     <Body>
-      <Heading>Decks goes here</Heading>
+      <Heading>About goes here</Heading>
     </Body>
   );
 }
