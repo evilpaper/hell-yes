@@ -21,15 +21,24 @@ interface IHeader {
 
 // This is only temporary to center placeholder components
 export const Content = styled.section`
-  padding: 3rem;
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(16rem, 16rem));
+  display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
 `;
 
-export const Card = styled.div<any>`
+export const Deck = styled.ul`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const Card = styled.li<any>`
+  position: absolute;
+
+  width: 16rem;
   min-width: 16rem;
   height: 22rem;
   border-radius: 1rem;
@@ -38,11 +47,12 @@ export const Card = styled.div<any>`
   background-image: url(${(props) => props.bgImgUrl});
   background-size: cover;
   padding: 2rem;
+  z-index: 100;
 
   transition: 0.2s all ease-in-out;
 
   &:hover {
-    transform: scale(0.9);
+    transform: rotate(5deg);
   }
 `;
 
@@ -65,15 +75,17 @@ export default function TrainingDeck() {
 
   return (
     <Content>
-      {cards.map((card, index) => (
-        <Card
-          key={index}
-          bgImgUrl={card.bgImgUrl}
-          borderColor={card.borderColor}
-        >
-          <Header textColor={"white"}>{card.term}</Header>
-        </Card>
-      ))}
+      <Deck>
+        {cards.map((card, index) => (
+          <Card
+            key={index}
+            bgImgUrl={card.bgImgUrl}
+            borderColor={card.borderColor}
+          >
+            <Header textColor={"white"}>{card.term}</Header>
+          </Card>
+        ))}
+      </Deck>
     </Content>
   );
 }
