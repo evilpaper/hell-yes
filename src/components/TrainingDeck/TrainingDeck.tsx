@@ -73,6 +73,13 @@ export default function TrainingDeck() {
     setCards(cardsFromDeck);
   }, [id]);
 
+  function handleCardClick(e: any) {
+    setCards((originalDeck) => {
+      const reducedDeck = [...originalDeck.slice(0, originalDeck.length - 1)];
+      return reducedDeck;
+    });
+  }
+
   return (
     <Content>
       <Deck>
@@ -81,6 +88,7 @@ export default function TrainingDeck() {
             key={index}
             bgImgUrl={card.bgImgUrl}
             borderColor={card.borderColor}
+            onClick={handleCardClick}
           >
             <Header textColor={"white"}>{card.term}</Header>
           </Card>
