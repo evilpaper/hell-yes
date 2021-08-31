@@ -50,10 +50,7 @@ export const Card = styled.li<any>`
   z-index: 100;
 
   transition: 0.2s all ease-in-out;
-
-  &:hover {
-    transform: rotate(5deg);
-  }
+  transform: rotate(${(props) => props.index * Math.random()}deg);
 `;
 
 export const Header = styled.h1<IHeader>`
@@ -89,6 +86,7 @@ export default function TrainingDeck() {
             bgImgUrl={card.bgImgUrl}
             borderColor={card.borderColor}
             onClick={handleCardClick}
+            index={index}
           >
             <Header textColor={"white"}>{card.term}</Header>
           </Card>
