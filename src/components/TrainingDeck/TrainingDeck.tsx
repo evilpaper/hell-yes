@@ -48,9 +48,9 @@ export const Card = styled.li<any>`
   background-size: cover;
   padding: 2rem;
   z-index: 100;
+  transform: rotate(${(props) => props.index * Math.random()}deg);
 
   transition: 0.2s all ease-in-out;
-  transform: rotate(${(props) => props.index * Math.random()}deg);
 `;
 
 export const Header = styled.h1<IHeader>`
@@ -80,18 +80,20 @@ export default function TrainingDeck() {
   return (
     <Content>
       <Deck>
-        {cards.map((card, index) => (
-          <Card
-            key={index}
-            bgImgUrl={card.bgImgUrl}
-            borderColor={card.borderColor}
-            onClick={handleCardClick}
-            index={index}
-          >
-            <Header textColor={"white"}>{card.term}</Header>
-          </Card>
-        ))}
+        {cards &&
+          cards.map((card, index) => (
+            <Card
+              key={index}
+              bgImgUrl={card.bgImgUrl}
+              borderColor={card.borderColor}
+              onClick={handleCardClick}
+              index={index}
+            >
+              <Header textColor={"white"}>{card.term}</Header>
+            </Card>
+          ))}
       </Deck>
+      {!cards.length && <h1>Start again</h1>}
     </Content>
   );
 }
