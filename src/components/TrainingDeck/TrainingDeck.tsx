@@ -79,21 +79,26 @@ export default function TrainingDeck() {
 
   return (
     <Content>
-      <Deck>
-        {cards &&
-          cards.map((card, index) => (
-            <Card
-              key={index}
-              bgImgUrl={card.bgImgUrl}
-              borderColor={card.borderColor}
-              onClick={handleCardClick}
-              index={index}
-            >
-              <Header textColor={"white"}>{card.term}</Header>
-            </Card>
-          ))}
-      </Deck>
-      {!cards.length && <h1>Start again</h1>}
+      <div>
+        <Deck>
+          {cards &&
+            cards.map((card, index) => (
+              <Card
+                key={index}
+                bgImgUrl={card.bgImgUrl}
+                borderColor={card.borderColor}
+                onClick={handleCardClick}
+                index={index}
+              >
+                <Header textColor={"white"}>{card.term}</Header>
+              </Card>
+            ))}
+        </Deck>
+        {!cards.length && <h1>Start again</h1>}
+      </div>
+      <button>No</button>
+      <button>Flip</button>
+      <button>Yes</button>
     </Content>
   );
 }
