@@ -45,11 +45,8 @@ const Card = styled.li<any>`
   background-image: url(${(props) => props.bgImgUrl});
   background-size: cover;
   padding: 2rem;
-
-  top: ${(props) => `${props.index * -10}px`};
-  transform-origin: top center;
-  transform: scale(${(props) => 1 - props.index * 0.06});
-  z-index: ${(props) => props.length - props.index};
+  transform: rotate(${(props) => props.index * Math.random() * 1}deg);
+  z-index: ${(props) => props.length + props.index};
 `;
 
 const Header = styled.h1<IHeader>`
