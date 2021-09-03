@@ -69,6 +69,14 @@ const Actions = styled.div`
   margin-top: 2rem;
 `;
 
+const Button = styled.button`
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+`;
+
 export default function TrainingDeck() {
   const [cards, setCards] = useState<ICardItems | []>([]);
   const params = useParams<DeckParams>();
@@ -105,9 +113,9 @@ export default function TrainingDeck() {
         {!cards.length && <h1>Start again</h1>}
       </Deck>
       <Actions>
-        <button>No</button>
-        <button>Flip</button>
-        <button>Yes</button>
+        <Button>No</Button>
+        <Button>Flip</Button>
+        <Button>Yes</Button>
       </Actions>
     </Content>
   );
