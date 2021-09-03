@@ -31,18 +31,13 @@ const Content = styled.section`
 
 const Deck = styled.ul`
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 16rem;
-  min-width: 16rem;
   height: 22rem;
 `;
 
 const Card = styled.li<any>`
   position: absolute;
   width: 16rem;
-  min-width: 16rem;
   height: 22rem;
   border-radius: 1rem;
   border: 2px solid ${(props) => props.borderColor};
@@ -50,10 +45,11 @@ const Card = styled.li<any>`
   background-image: url(${(props) => props.bgImgUrl});
   background-size: cover;
   padding: 2rem;
-  z-index: 100;
-  transform: rotate(${(props) => props.index * Math.random()}deg);
 
-  transition: 0.2s all ease-in-out;
+  top: ${(props) => `${props.index * -10}px`};
+  transform-origin: top center;
+  transform: scale(${(props) => 1 - props.index * 0.06});
+  z-index: ${(props) => props.length - props.index};
 `;
 
 const Header = styled.h1<IHeader>`
@@ -106,6 +102,7 @@ export default function TrainingDeck() {
               borderColor={card.borderColor}
               onClick={handleCardClick}
               index={index}
+              length={cards.length}
             >
               <Header textColor={"white"}>{card.term}</Header>
             </Card>
