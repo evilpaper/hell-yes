@@ -33,6 +33,9 @@ const Deck = styled.ul`
   position: relative;
   width: 16rem;
   height: 22rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Card = styled.li<any>`
@@ -46,7 +49,7 @@ const Card = styled.li<any>`
   background-size: cover;
   padding: 2rem;
   transform: rotate(${(props) => props.index * Math.random() * 1}deg);
-  z-index: ${(props) => props.length + props.index};
+  z-index: ${(props) => props.index * 10};
 `;
 
 const Header = styled.h1<IHeader>`
@@ -67,7 +70,9 @@ const Button = styled.button`
   border: 2px solid white;
   color: white;
   padding: 1rem;
-  border-radius: 1rem;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
 `;
 
 export default function TrainingDeck() {
@@ -87,6 +92,10 @@ export default function TrainingDeck() {
       return reducedDeck;
     });
   }
+
+  // function getRandom(min: number, max: number) {
+  //   return Math.random() * (max - min) + min;
+  // }
 
   return (
     <Content>
