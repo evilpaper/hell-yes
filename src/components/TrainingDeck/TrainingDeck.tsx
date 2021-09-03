@@ -20,24 +20,27 @@ interface IHeader {
 }
 
 // This is only temporary to center placeholder components
-export const Content = styled.section`
+const Content = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
   height: 100vh;
 `;
 
-export const Deck = styled.ul`
+const Deck = styled.ul`
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 16rem;
+  min-width: 16rem;
+  height: 22rem;
 `;
 
-export const Card = styled.li<any>`
+const Card = styled.li<any>`
   position: absolute;
-
   width: 16rem;
   min-width: 16rem;
   height: 22rem;
@@ -53,10 +56,17 @@ export const Card = styled.li<any>`
   transition: 0.2s all ease-in-out;
 `;
 
-export const Header = styled.h1<IHeader>`
+const Header = styled.h1<IHeader>`
   color: ${(props) => props.textColor};
   font-weight: 700;
   font-size: 1.6em;
+`;
+
+const Actions = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 16rem;
+  margin-top: 2rem;
 `;
 
 export default function TrainingDeck() {
@@ -79,26 +89,26 @@ export default function TrainingDeck() {
 
   return (
     <Content>
-      <div>
-        <Deck>
-          {cards &&
-            cards.map((card, index) => (
-              <Card
-                key={index}
-                bgImgUrl={card.bgImgUrl}
-                borderColor={card.borderColor}
-                onClick={handleCardClick}
-                index={index}
-              >
-                <Header textColor={"white"}>{card.term}</Header>
-              </Card>
-            ))}
-        </Deck>
+      <Deck>
+        {cards &&
+          cards.map((card, index) => (
+            <Card
+              key={index}
+              bgImgUrl={card.bgImgUrl}
+              borderColor={card.borderColor}
+              onClick={handleCardClick}
+              index={index}
+            >
+              <Header textColor={"white"}>{card.term}</Header>
+            </Card>
+          ))}
         {!cards.length && <h1>Start again</h1>}
-      </div>
-      <button>No</button>
-      <button>Flip</button>
-      <button>Yes</button>
+      </Deck>
+      <Actions>
+        <button>No</button>
+        <button>Flip</button>
+        <button>Yes</button>
+      </Actions>
     </Content>
   );
 }
