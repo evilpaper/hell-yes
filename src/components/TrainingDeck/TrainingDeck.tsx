@@ -86,7 +86,7 @@ export default function TrainingDeck() {
     const { cards: cardsFromDeck = [] } = selectedDeck;
     const cardsWithRotation = cardsFromDeck.map((item) => ({
       ...item,
-      rotation: getRandom(-10, 10),
+      rotation: getRandom(-5, 5),
     }));
     setCards(cardsWithRotation);
   }, [id]);
