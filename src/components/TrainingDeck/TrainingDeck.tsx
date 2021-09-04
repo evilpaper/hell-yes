@@ -7,6 +7,7 @@ interface ICardItem {
   term: string;
   bgImgUrl: string;
   borderColor: string;
+  rotation: number;
 }
 
 interface ICardItems extends Array<ICardItem> {}
@@ -48,7 +49,7 @@ const Card = styled.li<any>`
   background-image: url(${(props) => props.bgImgUrl});
   background-size: cover;
   padding: 2rem;
-  transform: rotate(${(props) => props.index * Math.random() * 1}deg);
+  transform: rotate(${(props) => props.rotation}deg);
   z-index: ${(props) => props.index * 10};
 `;
 
@@ -83,7 +84,11 @@ export default function TrainingDeck() {
   useEffect(() => {
     const [selectedDeck] = DECKS.filter((deck) => deck.routeID === id);
     const { cards: cardsFromDeck = [] } = selectedDeck;
-    setCards(cardsFromDeck);
+    const cardsWithRotation = cardsFromDeck.map((item) => ({
+      ...item,
+      rotation: getRandom(-10, 10),
+    }));
+    setCards(cardsWithRotation);
   }, [id]);
 
   function handleCardClick(e: any) {
@@ -93,9 +98,9 @@ export default function TrainingDeck() {
     });
   }
 
-  // function getRandom(min: number, max: number) {
-  //   return Math.random() * (max - min) + min;
-  // }
+  function getRandom(min: number, max: number) {
+    return Math.floor(Math.random() * (max - min) + min);
+  }
 
   return (
     <Content>
@@ -109,6 +114,7 @@ export default function TrainingDeck() {
               onClick={handleCardClick}
               index={index}
               length={cards.length}
+              rotation={card.rotation}
             >
               <Header textColor={"white"}>{card.term}</Header>
             </Card>
@@ -116,9 +122,9 @@ export default function TrainingDeck() {
         {!cards.length && <h1>Start again</h1>}
       </Deck>
       <Actions>
-        <Button>No</Button>
+        <Button onClick={handleCardClick}>No</Button>
         <Button>Flip</Button>
-        <Button>Yes</Button>
+        <Button onClick={handleCardClick}>Yes</Button>
       </Actions>
     </Content>
   );

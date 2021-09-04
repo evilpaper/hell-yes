@@ -125,6 +125,7 @@ export const DECKS = [
         orderSequence: 10,
         bgImgUrl: ReactBgUrl,
         borderColor: "hsl(199, 90%, 57%)",
+        rotation: -10,
       },
     ],
   },
