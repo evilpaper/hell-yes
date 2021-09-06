@@ -1,7 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import Menu from "components/Menu/Menu";
-import Footer from "components/Footer/Footer";
+import Menu from "modules/common/components/Menu/Menu";
+import Footer from "modules/common/components/Footer/Footer";
 
 interface Props {
   component: any;

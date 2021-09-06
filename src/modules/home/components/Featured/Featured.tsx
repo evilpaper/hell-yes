@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import CoverCard from "components/CoverCard/CoverCard";
+import CoverCard from "modules/common/components/CoverCard/CoverCard";
 import styled from "styled-components";
 import { DECKS } from "constants/DECKS";
 
