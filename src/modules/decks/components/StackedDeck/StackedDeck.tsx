@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import styled from "styled-components";
 import { DECKS } from "constants/DECKS";
 
@@ -76,9 +76,23 @@ const Button = styled.button`
   height: 5rem;
 `;
 
+const BackButton = styled.button`
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 1rem;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+`;
+
 export default function TrainingDeck() {
   const [cards, setCards] = useState<ICardItems | []>([]);
   const params = useParams<DeckParams>();
+  const history = useHistory();
   const { id } = params;
 
   useEffect(() => {
@@ -98,12 +112,17 @@ export default function TrainingDeck() {
     });
   }
 
+  function handleBackClick(e: any) {
+    history.goBack();
+  }
+
   function getRandom(min: number, max: number) {
     return Math.floor(Math.random() * (max - min) + min);
   }
 
   return (
     <Content>
+      <BackButton onClick={handleBackClick}>Back</BackButton>
       <Deck>
         {cards &&
           cards.map((card, index) => (

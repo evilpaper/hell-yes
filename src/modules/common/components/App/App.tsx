@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "theme/theme";
 import Home from "modules/home/components/Home/Home";
 import PricingPlans from "modules/home/components/PricingPlans/PricingPlans";
-import TrainingDeck from "modules/decks/components/TrainingDeck/TrainingDeck";
+import StackedDeck from "modules/decks/components/StackedDeck/StackedDeck";
 import RouterWithMenu from "modules/common/components/RouterWithMenu/RouteWithMenu";
 import Decks from "modules/decks/components/Decks/Decks";
 import About from "modules/about/components/About";
@@ -19,7 +19,7 @@ export default function App() {
           <RouterWithMenu exact path="/pricing" component={PricingPlans} />
           <RouterWithMenu exact path="/about" component={About} />
           <Route exact path="/deck/:id">
-            <TrainingDeck />
+            <StackedDeck />
           </Route>
         </Switch>
       </BrowserRouter>
