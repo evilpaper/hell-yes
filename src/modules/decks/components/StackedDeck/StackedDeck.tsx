@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
-import styled from "styled-components";
+import * as Styled from "./StackedDeck.styled";
 import { DECKS } from "constants/DECKS";
 
 interface ICardItem {
@@ -16,78 +16,9 @@ type DeckParams = {
   id: string;
 };
 
-interface IHeader {
-  textColor: string;
+function getRandom(min: number, max: number) {
+  return Math.floor(Math.random() * (max - min) + min);
 }
-
-// This is only temporary to center placeholder components
-const Content = styled.section`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  height: 100vh;
-`;
-
-const Deck = styled.ul`
-  position: relative;
-  width: 16rem;
-  height: 22rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Card = styled.li<any>`
-  position: absolute;
-  width: 16rem;
-  height: 22rem;
-  border-radius: 1rem;
-  border: 2px solid ${(props) => props.borderColor};
-  color: white;
-  background-image: url(${(props) => props.bgImgUrl});
-  background-size: cover;
-  padding: 2rem;
-  transform: rotate(${(props) => props.rotation}deg);
-  z-index: ${(props) => props.index * 10};
-`;
-
-const Header = styled.h1<IHeader>`
-  color: ${(props) => props.textColor};
-  font-weight: 700;
-  font-size: 1.6em;
-`;
-
-const Actions = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 16rem;
-  margin-top: 2rem;
-`;
-
-const Button = styled.button`
-  background-color: transparent;
-  border: 2px solid white;
-  color: white;
-  padding: 1rem;
-  border-radius: 50%;
-  width: 5rem;
-  height: 5rem;
-`;
-
-const BackButton = styled.button`
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-  background-color: transparent;
-  border: none;
-  color: white;
-  padding: 1rem;
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-`;
 
 export default function TrainingDeck() {
   const [cards, setCards] = useState<ICardItems | []>([]);
@@ -116,17 +47,13 @@ export default function TrainingDeck() {
     history.goBack();
   }
 
-  function getRandom(min: number, max: number) {
-    return Math.floor(Math.random() * (max - min) + min);
-  }
-
   return (
-    <Content>
-      <BackButton onClick={handleBackClick}>Back</BackButton>
-      <Deck>
+    <Styled.Content>
+      <Styled.BackButton onClick={handleBackClick}>Back</Styled.BackButton>
+      <Styled.Deck>
         {cards &&
           cards.map((card, index) => (
-            <Card
+            <Styled.Card
               key={index}
               bgImgUrl={card.bgImgUrl}
               borderColor={card.borderColor}
@@ -135,16 +62,16 @@ export default function TrainingDeck() {
               length={cards.length}
               rotation={card.rotation}
             >
-              <Header textColor={"white"}>{card.term}</Header>
-            </Card>
+              <Styled.Header textColor={"white"}>{card.term}</Styled.Header>
+            </Styled.Card>
           ))}
         {!cards.length && <h1>Start again</h1>}
-      </Deck>
-      <Actions>
-        <Button onClick={handleCardClick}>No</Button>
-        <Button>Flip</Button>
-        <Button onClick={handleCardClick}>Yes</Button>
-      </Actions>
-    </Content>
+      </Styled.Deck>
+      <Styled.Actions>
+        <Styled.Button onClick={handleCardClick}>No</Styled.Button>
+        <Styled.Button>Flip</Styled.Button>
+        <Styled.Button onClick={handleCardClick}>Yes</Styled.Button>
+      </Styled.Actions>
+    </Styled.Content>
   );
 }
