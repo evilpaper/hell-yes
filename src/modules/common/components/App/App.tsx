@@ -6,7 +6,7 @@ import Home from "modules/home/components/Home/Home";
 import PricingPlans from "modules/home/components/PricingPlans/PricingPlans";
 import StackedDeck from "modules/decks/components/StackedDeck/StackedDeck";
 import RouterWithMenu from "modules/common/components/RouterWithMenu/RouteWithMenu";
-import Decks from "modules/decks/components/Decks/Decks";
+import Decks from "modules/decks/components/DecksGallery/DecksGallery";
 import About from "modules/about/components/About";
 
 export default function App() {
