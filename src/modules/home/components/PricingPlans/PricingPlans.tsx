@@ -21,7 +21,7 @@ const Plans = styled.ul`
 `;
 
 const Plan = styled.li`
-  padding: 2rem;
+  padding: 3rem 2rem;
   margin: 1rem;
   border: 2px solid ${(props) => props.theme.color.primaryLight};
   border-radius: 1rem;
