@@ -69,6 +69,12 @@ export const BackButton = styled.button`
   color: white;
   padding: 1rem;
   border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
+`;
+
+export const RestartButton = styled.button`
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
 `;

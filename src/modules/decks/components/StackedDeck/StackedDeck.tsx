@@ -47,6 +47,10 @@ export default function TrainingDeck() {
     history.goBack();
   }
 
+  function handleRestartClick(e: any) {
+    console.log("Nice click");
+  }
+
   return (
     <Styled.Content>
       <Styled.BackButton onClick={handleBackClick}>Back</Styled.BackButton>
@@ -65,7 +69,11 @@ export default function TrainingDeck() {
               <Styled.Header textColor={"white"}>{card.term}</Styled.Header>
             </Styled.Card>
           ))}
-        {!cards.length && <h1>Start again</h1>}
+        {!cards.length && (
+          <Styled.RestartButton onClick={handleRestartClick}>
+            Start again
+          </Styled.RestartButton>
+        )}
       </Styled.Deck>
       <Styled.Actions>
         <Styled.Button onClick={handleCardClick}>No</Styled.Button>
