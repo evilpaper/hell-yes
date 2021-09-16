@@ -11,12 +11,16 @@ const Body = styled.div`
   padding-right: 6%;
   padding-bottom: 6%;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+  // The switcher pattern
+  & > * {
+    flex-grow: 1;
+    flex-basis: calc((40rem - 100%) * 999);
+  }
 `;
 
 const Block = styled.blockquote`
-  flex: 1;
   padding: 2rem;
   margin-block-start: 0;
   margin-block-end: 0;
