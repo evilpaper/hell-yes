@@ -1,6 +1,11 @@
 import React from "react";
 import bg from "assets/images/home-bg-cred-roman-mager.jpg";
-import styled from "styled-components";
+import { ReactComponent as Arrow } from "assets/images/arrow.svg";
+import styled, { keyframes } from "styled-components";
+
+const rockAnimation = keyframes`
+  50% { transform: translateX(0.4em) }
+`;
 
 const Section = styled.section`
   height: 80vh;
@@ -54,11 +59,14 @@ export const Button = styled.button`
   color: ${(props) => props.theme.color.white};
   background-color: ${(props) => props.theme.color.primary};
   border: 1px solid ${(props) => props.theme.color.primary};
-  padding: 0.3rem 1.6rem;
+  padding: 0.5rem 1.6rem;
   border-radius: 2rem;
   max-width: 16rem;
   font-weight: 600;
   transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     color: ${(props) => props.theme.color.greyDarkest};
@@ -66,6 +74,16 @@ export const Button = styled.button`
     border: 1px solid ${(props) => props.theme.color.white};
     transition: all 0.2s ease-in-out;
   }
+`;
+
+const StyledArrow = styled(Arrow)`
+  margin-left: 0.8em;
+  fill: ${(props) => props.theme.color.white};
+  width: 0.9rem;
+  animation-name: ${rockAnimation};
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 `;
 
 export default function Hero() {
@@ -81,7 +99,10 @@ export default function Hero() {
             Memorize technical definitions in no time with flashcards. Try now,
             no account required.
           </Subtitle>
-          <Button>See the decks</Button>
+          <Button>
+            See the decks
+            <StyledArrow />
+          </Button>
         </Stack>
       </Body>
     </Section>
