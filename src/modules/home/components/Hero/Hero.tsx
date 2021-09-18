@@ -1,7 +1,9 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import bg from "assets/images/home-bg-cred-roman-mager.jpg";
 import { ReactComponent as Arrow } from "assets/images/arrow.svg";
 import styled, { keyframes } from "styled-components";
+import { DECKS } from "constants/DECKS";
 
 const rockAnimation = keyframes`
   50% { transform: translateX(0.4em) }
@@ -73,6 +75,10 @@ export const Button = styled.button`
     background-color: ${(props) => props.theme.color.white};
     border: 1px solid ${(props) => props.theme.color.white};
     transition: all 0.2s ease-in-out;
+
+    & > * {
+      fill: ${(props) => props.theme.color.greyDarkest};
+    }
   }
 `;
 
@@ -86,7 +92,15 @@ const StyledArrow = styled(Arrow)`
   animation-timing-function: ease-in-out;
 `;
 
+const routeID = DECKS[0].routeID;
+
 export default function Hero() {
+  const history = useHistory();
+
+  function handleButtonClick() {
+    history.push(`/deck/${routeID}`);
+  }
+
   return (
     <Section>
       <Body>
@@ -99,8 +113,8 @@ export default function Hero() {
             Memorize technical definitions in no time with flashcards. Try now,
             no account required.
           </Subtitle>
-          <Button>
-            See the decks
+          <Button onClick={handleButtonClick}>
+            Test yourself
             <StyledArrow />
           </Button>
         </Stack>

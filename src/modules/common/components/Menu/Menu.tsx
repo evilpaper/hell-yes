@@ -26,14 +26,11 @@ export default function Menu() {
             />
           </NavLink>
           <Styled.SubwayMenu>
-            <Styled.RouterNavLink activeClassName="selected" to="decks">
-              Decks
+            <Styled.RouterNavLink activeClassName="selected" to="instructions">
+              Instructions
             </Styled.RouterNavLink>
             <Styled.RouterNavLink activeClassName="selected" to="pricing">
               Pricing
-            </Styled.RouterNavLink>
-            <Styled.RouterNavLink activeClassName="selected" to="about">
-              About
             </Styled.RouterNavLink>
           </Styled.SubwayMenu>
         </Styled.LeftPart>
@@ -47,10 +44,10 @@ export default function Menu() {
       <Styled.HamburgerMenu open={open}>
         <Styled.HambugerMenuLink
           activeClassName="selected"
-          to="decks"
+          to="instructions"
           onClick={toggleMenu}
         >
-          Decks
+          Instructions
         </Styled.HambugerMenuLink>
         <Styled.HambugerMenuLink
           activeClassName="selected"
@@ -58,13 +55,6 @@ export default function Menu() {
           onClick={toggleMenu}
         >
           Pricing
-        </Styled.HambugerMenuLink>
-        <Styled.HambugerMenuLink
-          activeClassName="selected"
-          to="about"
-          onClick={toggleMenu}
-        >
-          About
         </Styled.HambugerMenuLink>
       </Styled.HamburgerMenu>
     </>
