@@ -35,6 +35,13 @@ export const Card = styled.li<any>`
   padding: 2rem;
   transform: rotate(${(props) => props.rotation}deg);
   z-index: ${(props) => props.index * 10};
+  /* prettier-ignore */
+  box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+              0 2px 2px rgba(0,0,0,0.11), 
+              0 4px 4px rgba(0,0,0,0.11), 
+              0 8px 8px rgba(0,0,0,0.11), 
+              0 16px 16px rgba(0,0,0,0.11), 
+              0 32px 32px rgba(0,0,0,0.11);
 `;
 
 export const Header = styled.h1<IHeader>`
