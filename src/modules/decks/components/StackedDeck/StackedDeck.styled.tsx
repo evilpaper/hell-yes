@@ -28,8 +28,7 @@ export const Card = styled.li<any>`
   width: 16rem;
   height: 22rem;
   border-radius: 1rem;
-  border: 2px solid ${(props) => props.borderColor};
-  color: white;
+  color: black;
   background-image: url(${(props) => props.bgImgUrl});
   background-size: cover;
   padding: 2rem;

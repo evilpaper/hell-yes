@@ -17,7 +17,6 @@ export const CoverCard = styled.div<ICoverCard>`
   min-width: 16rem;
   height: 22rem;
   border-radius: 1rem;
-  border: 2px solid ${(props) => props.borderColor};
   color: white;
   background-image: url(${(props) => props.bgImgUrl});
   background-size: cover;
