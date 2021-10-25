@@ -174,7 +174,7 @@ export const DECKS = [
     routeID: "next-js",
     bgImgUrl: NextJSBgUrl,
     borderColor: "hsl(250, 18%, 17%)",
-    textColor: "white",
+    textColor: "black",
     cards: [
       {
         id: nanoid(),
