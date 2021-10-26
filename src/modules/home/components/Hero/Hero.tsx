@@ -59,8 +59,8 @@ const Subtitle = styled.h2`
 
 export const Button = styled.button`
   color: ${(props) => props.theme.color.white};
-  background-color: ${(props) => props.theme.color.primary};
-  border: 1px solid ${(props) => props.theme.color.primary};
+  background: linear-gradient(45deg, #fa1cff, #fa0169);
+  border: none;
   padding: 0.5rem 1.6rem;
   border-radius: 2rem;
   max-width: 16rem;
