@@ -2,11 +2,9 @@ import React, { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import * as Styled from "./StackedDeck.styled";
 import { DECKS } from "constants/DECKS";
-import CardBG from "assets/images/card-bg.jpg";
 
 interface ICardItem {
   term: string;
-  bgImgUrl: string;
   rotation: number;
 }
 
@@ -59,7 +57,6 @@ export default function TrainingDeck() {
           cards.map((card, index) => (
             <Styled.Card
               key={index}
-              bgImgUrl={CardBG}
               onClick={handleCardClick}
               index={index}
               length={cards.length}
