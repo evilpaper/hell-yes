@@ -26,7 +26,7 @@ export const Deck = styled.ul`
 export const Card = styled.li<any>`
   position: absolute;
   width: 16rem;
-  height: 22rem;
+  height: 24rem;
   border-radius: 1rem;
   color: black;
   background-color: white;
@@ -40,8 +40,10 @@ export const Card = styled.li<any>`
 
 export const Header = styled.h1<IHeader>`
   color: ${(props) => props.textColor};
-  font-weight: 700;
-  font-size: 1.6em;
+  font-weight: 500;
+  font-size: 1.4em;
+  margin: 0 auto;
+  text-align: center;
 `;
 
 export const Actions = styled.div`
@@ -53,9 +55,9 @@ export const Actions = styled.div`
 
 export const Button = styled.button`
   background-color: transparent;
-  border: 2px solid slategrey;
+  border: 1px solid slategrey;
   color: white;
-  padding: 1rem;
+  padding: 0.6rem 1rem;
   border-radius: 10rem;
   min-width: 5rem;
 `;

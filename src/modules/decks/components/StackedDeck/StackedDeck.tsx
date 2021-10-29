@@ -20,6 +20,7 @@ function getRandom(min: number, max: number) {
 
 export default function TrainingDeck() {
   const [cards, setCards] = useState<ICardItems | []>([]);
+  const [deck, setDeck] = useState<any>();
   const params = useParams<DeckParams>();
   const history = useHistory();
   const { id } = params;
@@ -31,6 +32,7 @@ export default function TrainingDeck() {
       ...item,
       rotation: getRandom(-5, 5),
     }));
+    setDeck(selectedDeck);
     setCards(cardsWithRotation);
   }, [id]);
 
@@ -62,6 +64,7 @@ export default function TrainingDeck() {
               length={cards.length}
               rotation={card.rotation}
             >
+              <img src={deck.logo} alt="Deck logo" />
               <Styled.Header textColor={"black"}>{card.term}</Styled.Header>
             </Styled.Card>
           ))}
