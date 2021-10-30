@@ -38,6 +38,10 @@ export const Card = styled.li<any>`
   box-shadow: 0 4px 4px rgba(0,0,0,0.3);
 `;
 
+export const Logo = styled.img`
+  margin: 0 auto;
+`;
+
 export const Header = styled.h1<IHeader>`
   color: ${(props) => props.textColor};
   font-weight: 500;
