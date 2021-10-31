@@ -36,6 +36,7 @@ export const Card = styled.li<any>`
   z-index: ${(props) => props.index * 10};
   /* prettier-ignore */
   box-shadow: 0 4px 4px rgba(0,0,0,0.3);
+  overflow: hidden;
 `;
 
 export const Logo = styled.img`
@@ -48,6 +49,24 @@ export const Header = styled.h1<IHeader>`
   font-size: 1.4em;
   margin: 0 auto;
   text-align: center;
+`;
+
+export const Kicker = styled.p`
+  color: slategrey;
+  text-align: center;
+`;
+
+export const Footer = styled.span`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  min-height: 4rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #fa1cff, #fa0169);
 `;
 
 export const Actions = styled.div`

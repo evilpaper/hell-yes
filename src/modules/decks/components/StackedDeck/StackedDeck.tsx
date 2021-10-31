@@ -65,7 +65,9 @@ export default function TrainingDeck() {
               rotation={card.rotation}
             >
               <Styled.Logo src={deck.logo} alt="Deck logo" />
+              <Styled.Kicker>Term</Styled.Kicker>
               <Styled.Header textColor={"black"}>{card.term}</Styled.Header>
+              <Styled.Footer>{deck.name}</Styled.Footer>
             </Styled.Card>
           ))}
         {!cards.length && (
