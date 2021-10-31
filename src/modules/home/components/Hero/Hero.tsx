@@ -69,6 +69,7 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 
   &:hover {
     color: ${(props) => props.theme.color.greyDarkest};
@@ -86,10 +87,10 @@ const StyledArrow = styled(Arrow)`
   margin-left: 0.8em;
   fill: ${(props) => props.theme.color.white};
   width: 0.9rem;
-  // animation-name: ${rockAnimation};
-  // animation-duration: 1s;
-  // animation-iteration-count: infinite;
-  // animation-timing-function: ease-in-out;
+  animation-name: ${rockAnimation};
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 `;
 
 const routeID = DECKS[0].routeID;
@@ -114,7 +115,7 @@ export default function Hero() {
             no account required.
           </Subtitle>
           <Button onClick={handleButtonClick}>
-            Try a free deck
+            Try! It's free
             <StyledArrow />
           </Button>
         </Stack>

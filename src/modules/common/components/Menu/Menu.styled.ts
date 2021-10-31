@@ -101,6 +101,7 @@ export const HamburgerMenu = styled.div<IHamburgerMenu>`
   justify-content: center;
   align-items: center;
   color: white;
+  z-index: 10;
 `;
 
 export const HambugerMenuLink = styled(RouterNavLink)`
