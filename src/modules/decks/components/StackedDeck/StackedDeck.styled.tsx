@@ -32,7 +32,7 @@ export const Card = styled.li<any>`
   background-color: white;
   background-size: cover;
   padding: 2rem;
-  transform: rotate(${(props) => props.rotation}deg);
+
   z-index: ${(props) => props.index * 10};
   /* prettier-ignore */
   box-shadow: 0 4px 4px rgba(0,0,0,0.3);
