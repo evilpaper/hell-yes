@@ -78,7 +78,7 @@ export const Actions = styled.div`
 
 export const Button = styled.button`
   background-color: transparent;
-  border: 1px solid slategrey;
+  border: 1px solid grey;
   color: white;
   padding: 0.6rem 1rem;
   border-radius: 10rem;
