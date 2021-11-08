@@ -28,12 +28,12 @@ export const RouterNavLink = styled(NavLink)`
   text-decoration: none;
   cursor: pointer;
   font-weight: 500;
-  color: ${(props) => props.theme.color.white};
+  color: var(--color-white);
   transition: 0.2s border-bottom ease-in;
   border-bottom: 4px solid transparent;
 
   &.${(props) => props.activeClassName} {
-    color: ${(props) => props.theme.color.primaryLight};
+    color: var(--color-primary-lighest);
     border-bottom: 4px solid ${(props) => props.theme.color.primaryLight};
   }
 `;

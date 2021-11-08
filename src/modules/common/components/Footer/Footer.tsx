@@ -1,29 +1,18 @@
 import React from "react";
-import styled from "styled-components";
-
-const CopyrightFolio = styled.p`
-  width: 100%;
-  text-align: center;
-`;
-
-const LegalLinksFolio = styled.p`
-  width: 100%;
-  text-align: center;
-  margin-bottom: 2em;
-`;
+import * as S from "./Footer.styled";
 
 export default function Footer() {
   const date = new Date();
   const year = date.getFullYear();
 
   return (
-    <>
-      <CopyrightFolio>
+    <S.Footer>
+      <S.CopyrightFolio>
         Copyright © {year} Hell Yes | All Rights Reserved
-      </CopyrightFolio>
-      <LegalLinksFolio>
+      </S.CopyrightFolio>
+      <S.LegalLinksFolio>
         Terms of service | Privacy Policy | Cookies
-      </LegalLinksFolio>
-    </>
+      </S.LegalLinksFolio>
+    </S.Footer>
   );
 }

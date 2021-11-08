@@ -5,7 +5,6 @@ import JavaScriptBgUrl from "assets/images/js-card-bg.jpg";
 import TypeScriptBgUrl from "assets/images/ts-card-bg.jpg";
 import NextJSBgUrl from "assets/images/nextjs-card-bg.jpg";
 import BashBgUrl from "assets/images/bash-card-bg.jpg";
-import CSSBgUrl from "assets/images/css-card-bg.jpg";
 import LogoReact from "assets/images/logo-react.svg";
 
 export const DECKS = [
@@ -187,26 +186,6 @@ export const DECKS = [
         orderSequence: 1,
         bgImgUrl: BashBgUrl,
         borderColor: "hsl(206, 15%, 40%)",
-      },
-    ],
-  },
-  {
-    name: "CSS",
-    id: nanoid(8),
-    routeID: "css",
-    bgImgUrl: CSSBgUrl,
-    borderColor: "hsl(157, 92%, 82%)",
-    textColor: "black",
-    cards: [
-      {
-        id: nanoid(),
-        term: "Term",
-        definition: "Definition",
-        nailed: false,
-        flipped: false,
-        orderSequence: 1,
-        bgImgUrl: CSSBgUrl,
-        borderColor: "hsl(157, 92%, 82%)",
       },
     ],
   },

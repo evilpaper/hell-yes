@@ -44,10 +44,7 @@ export const Logo = styled.img`
 `;
 
 export const Header = styled.h1<IHeader>`
-  color: ${(props) => {
-    console.log(props);
-    return props.textColor;
-  }};
+  color: ${(props) => props.theme.color.primaryLight};
   font-weight: 500;
   font-size: 1.4em;
   margin: 0 auto;
@@ -55,7 +52,7 @@ export const Header = styled.h1<IHeader>`
 `;
 
 export const Kicker = styled.p`
-  color: ${(props) => props.theme.color.grey};
+  color: ${(props) => props.theme.color.greyDark};
   text-align: center;
 `;
 
@@ -81,7 +78,7 @@ export const Actions = styled.div`
 
 export const Button = styled.button`
   background-color: transparent;
-  border: 1px solid grey;
+  border: 1px solid ${(props) => props.theme.color.greyDark};
   color: white;
   padding: 0.6rem 1rem;
   border-radius: 10rem;
