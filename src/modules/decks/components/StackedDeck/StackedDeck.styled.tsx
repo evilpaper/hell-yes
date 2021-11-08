@@ -44,7 +44,10 @@ export const Logo = styled.img`
 `;
 
 export const Header = styled.h1<IHeader>`
-  color: ${(props) => props.textColor};
+  color: ${(props) => {
+    console.log(props);
+    return props.textColor;
+  }};
   font-weight: 500;
   font-size: 1.4em;
   margin: 0 auto;
@@ -52,7 +55,7 @@ export const Header = styled.h1<IHeader>`
 `;
 
 export const Kicker = styled.p`
-  color: slategrey;
+  color: ${(props) => props.theme.color.grey};
   text-align: center;
 `;
 
