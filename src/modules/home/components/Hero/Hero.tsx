@@ -72,13 +72,13 @@ export const Button = styled.button`
   position: relative;
 
   &:hover {
-    color: ${(props) => props.theme.color.greyDarkest};
-    background-color: ${(props) => props.theme.color.white};
-    border: 1px solid ${(props) => props.theme.color.white};
+    color: ${(props) => props.theme.color.whitet};
+    background: none;
+    background-color: ${(props) => props.theme.color.primary};
     transition: all 0.2s ease-in-out;
 
     & > * {
-      fill: ${(props) => props.theme.color.greyDarkest};
+      fill: ${(props) => props.theme.color.white};
     }
   }
 `;

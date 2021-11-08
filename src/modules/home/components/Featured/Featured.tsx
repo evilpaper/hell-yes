@@ -15,6 +15,8 @@ const List = styled.ul`
   overflow-x: scroll;
 
   padding-left: 6%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 
   scroll-snap-type: x mandatory;
 `;

@@ -25,7 +25,7 @@ export const CoverCard = styled.div<ICoverCard>`
   transition: 0.2s all ease-in-out;
 
   &:hover {
-    transform: scale(0.9);
+    transform: scale(1.05);
   }
 `;
 
