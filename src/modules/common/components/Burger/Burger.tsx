@@ -1,12 +1,12 @@
-import React from "react";
-import * as Styled from "./Burger.styled";
+// import React from "react";
+import * as S from "./Burger.styled";
 
 export default function Burger({ open }: { open: boolean }) {
   return (
-    <Styled.Burger aria-label="Main menu">
-      <Styled.Patty open={open} />
-      <Styled.Patty open={open} />
-      <Styled.Patty open={open} />
-    </Styled.Burger>
+    <S.Burger aria-label="Main menu">
+      <S.Patty open={open} />
+      <S.Patty open={open} />
+      <S.Patty open={open} />
+    </S.Burger>
   );
 }

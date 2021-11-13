@@ -5,6 +5,10 @@ interface Props {
   children?: React.ReactNode;
 }
 
+export default function Center({ children }: Props) {
+  return <StyledCenter>{children}</StyledCenter>;
+}
+
 const StyledCenter = styled.div`
   padding-left: 6%;
   padding-right: 6%;
@@ -12,7 +16,3 @@ const StyledCenter = styled.div`
   flex-direction: column;
   justify-content: center;
 `;
-
-export default function Center({ children }: Props) {
-  return <StyledCenter>{children}</StyledCenter>;
-}
