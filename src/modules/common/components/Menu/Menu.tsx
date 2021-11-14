@@ -35,7 +35,7 @@ export default function Menu() {
           </Styled.SubwayMenu>
         </Styled.LeftPart>
         <Styled.RightPart>
-          <Styled.Button>Login</Styled.Button>
+          <Styled.Button>My account</Styled.Button>
           <Styled.BurgerBox onClick={toggleMenu}>
             <Burger open={open} />
           </Styled.BurgerBox>

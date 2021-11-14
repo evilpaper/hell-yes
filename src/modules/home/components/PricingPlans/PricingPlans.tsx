@@ -24,7 +24,7 @@ export default function PricingPlans() {
             </PlanContent>
           </ul>
           <Price>Free</Price>
-          <CTA>Create your free account</CTA>
+          <CTA>Notify when available</CTA>
         </Plan>
         <Plan>
           <PlanHeading>Premium</PlanHeading>
@@ -43,7 +43,7 @@ export default function PricingPlans() {
             </PlanContent>
           </ul>
           <Price>$1/month</Price>
-          <CTA>Buy Premium</CTA>
+          <CTA>Notify when available</CTA>
         </Plan>
       </Plans>
     </Body>
