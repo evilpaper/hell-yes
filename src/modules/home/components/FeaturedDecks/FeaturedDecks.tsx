@@ -1,40 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import CoverCard from "modules/common/components/CoverCard/CoverCard";
-import styled from "styled-components";
+import * as S from "./FeaturedDecks.styled";
 import { DECKS } from "constants/DECKS";
 
-const SectionHeading = styled.h2`
-  font-weight: 600;
-  padding-left: 6%;
-`;
-
-const List = styled.ul`
-  margin-top: 1rem;
-  display: flex;
-  overflow-x: scroll;
-
-  padding-left: 6%;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-
-  scroll-snap-type: x mandatory;
-`;
-
-const ListItem = styled.li`
-  margin-right: 2rem;
-`;
-
-export default function Featured() {
+export default function FeaturedDecks() {
   const decks = DECKS || [];
 
   return (
     <>
-      <SectionHeading>Featured decks</SectionHeading>
-      <List>
+      <S.SectionHeading>Featured decks</S.SectionHeading>
+      <S.List>
         {" "}
         {decks.map((deck) => (
-          <ListItem key={deck.id}>
+          <S.ListItem key={deck.id}>
             <Link to={`/deck/${deck.routeID}`}>
               <CoverCard
                 name={deck.name}
@@ -43,9 +22,9 @@ export default function Featured() {
                 borderColor={deck.borderColor}
               />
             </Link>
-          </ListItem>
+          </S.ListItem>
         ))}
-      </List>
+      </S.List>
     </>
   );
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useHistory } from "react-router-dom";
-import * as Styled from "./StackedDeck.styled";
+import * as S from "./StackedDeck.styled";
 import { DECKS } from "constants/DECKS";
 
 interface ICardItem {
@@ -52,35 +52,35 @@ export default function TrainingDeck() {
   }
 
   return (
-    <Styled.Content>
-      <Styled.BackButton onClick={handleBackClick}>Back</Styled.BackButton>
-      <Styled.Deck>
+    <S.Content>
+      <S.BackButton onClick={handleBackClick}>Back</S.BackButton>
+      <S.Deck>
         {cards &&
           cards.map((card, index) => (
-            <Styled.Card
+            <S.Card
               key={index}
               onClick={handleCardClick}
               index={index}
               length={cards.length}
               rotation={card.rotation}
             >
-              <Styled.Logo src={deck.logo} alt="Deck logo" />
-              <Styled.Kicker>Term</Styled.Kicker>
-              <Styled.Header textColor={"black"}>{card.term}</Styled.Header>
-              <Styled.Footer>{deck.name}</Styled.Footer>
-            </Styled.Card>
+              <S.Logo src={deck.logo} alt="Deck logo" />
+              <S.Kicker>Term</S.Kicker>
+              <S.Header textColor={"black"}>{card.term}</S.Header>
+              <S.Footer>{deck.name}</S.Footer>
+            </S.Card>
           ))}
         {!cards.length && (
-          <Styled.RestartButton onClick={handleRestartClick}>
+          <S.RestartButton onClick={handleRestartClick}>
             Start again
-          </Styled.RestartButton>
+          </S.RestartButton>
         )}
-      </Styled.Deck>
-      <Styled.Actions>
-        <Styled.Button onClick={handleCardClick}>No</Styled.Button>
-        <Styled.Button>Flip</Styled.Button>
-        <Styled.Button onClick={handleCardClick}>Yes</Styled.Button>
-      </Styled.Actions>
-    </Styled.Content>
+      </S.Deck>
+      <S.Actions>
+        <S.Button onClick={handleCardClick}>No</S.Button>
+        <S.Button>Flip</S.Button>
+        <S.Button onClick={handleCardClick}>Yes</S.Button>
+      </S.Actions>
+    </S.Content>
   );
 }

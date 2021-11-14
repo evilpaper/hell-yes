@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "assets/images/logo.png";
 import Burger from "modules/common/components/Burger/Burger";
-
-import * as Styled from "./Menu.styled";
+import * as S from "./Menu.styled";
 
 export default function Menu() {
   const [open, setOpen] = useState(false);
@@ -14,10 +13,10 @@ export default function Menu() {
 
   return (
     <>
-      <Styled.Nav>
-        <Styled.LeftPart>
+      <S.Nav>
+        <S.LeftPart>
           <NavLink to="/">
-            <Styled.Logo
+            <S.Logo
               src={Logo}
               alt="Nailed It"
               width="64px"
@@ -25,38 +24,38 @@ export default function Menu() {
               object-fit="cover"
             />
           </NavLink>
-          <Styled.SubwayMenu>
-            <Styled.RouterNavLink activeClassName="selected" to="instructions">
+          <S.SubwayMenu>
+            <S.RouterNavLink activeClassName="selected" to="instructions">
               Instructions
-            </Styled.RouterNavLink>
-            <Styled.RouterNavLink activeClassName="selected" to="pricing">
+            </S.RouterNavLink>
+            <S.RouterNavLink activeClassName="selected" to="pricing">
               Pricing
-            </Styled.RouterNavLink>
-          </Styled.SubwayMenu>
-        </Styled.LeftPart>
-        <Styled.RightPart>
-          <Styled.Button>My account</Styled.Button>
-          <Styled.BurgerBox onClick={toggleMenu}>
+            </S.RouterNavLink>
+          </S.SubwayMenu>
+        </S.LeftPart>
+        <S.RightPart>
+          <S.Button>My account</S.Button>
+          <S.BurgerBox onClick={toggleMenu}>
             <Burger open={open} />
-          </Styled.BurgerBox>
-        </Styled.RightPart>
-      </Styled.Nav>
-      <Styled.HamburgerMenu open={open}>
-        <Styled.HambugerMenuLink
+          </S.BurgerBox>
+        </S.RightPart>
+      </S.Nav>
+      <S.HamburgerMenu open={open}>
+        <S.HambugerMenuLink
           activeClassName="selected"
           to="instructions"
           onClick={toggleMenu}
         >
           Instructions
-        </Styled.HambugerMenuLink>
-        <Styled.HambugerMenuLink
+        </S.HambugerMenuLink>
+        <S.HambugerMenuLink
           activeClassName="selected"
           to="pricing"
           onClick={toggleMenu}
         >
           Pricing
-        </Styled.HambugerMenuLink>
-      </Styled.HamburgerMenu>
+        </S.HambugerMenuLink>
+      </S.HamburgerMenu>
     </>
   );
 }

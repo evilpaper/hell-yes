@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "theme/theme";
 import Home from "modules/home/components/Home/Home";
 import PricingPlans from "modules/home/components/PricingPlans/PricingPlans";
-import StackedDeck from "modules/decks/components/StackedDeck/StackedDeck";
+import StackedDeck from "modules/deck/components/StackedDeck/StackedDeck";
 import RouterWithMenu from "modules/common/components/RouterWithMenu/RouteWithMenu";
 import Instructions from "modules/instructions/components/Instructions";
 

@@ -1,5 +1,5 @@
 import React from "react";
-import * as Styled from "./CoverCard.styled";
+import * as S from "./CoverCard.styled";
 
 interface Props {
   name: string;
@@ -14,12 +14,11 @@ export default function CoverCard({
   bgImgUrl,
   borderColor,
   textColor,
-  children,
 }: Props) {
   return (
-    <Styled.CoverCard bgImgUrl={bgImgUrl} borderColor={borderColor}>
-      <Styled.Title textColor={textColor}>{name}</Styled.Title>
-      <Styled.StudyTime textColor={textColor}>4 mins</Styled.StudyTime>
-    </Styled.CoverCard>
+    <S.CoverCard bgImgUrl={bgImgUrl} borderColor={borderColor}>
+      <S.Title textColor={textColor}>{name}</S.Title>
+      <S.StudyTime textColor={textColor}>4 mins</S.StudyTime>
+    </S.CoverCard>
   );
 }
