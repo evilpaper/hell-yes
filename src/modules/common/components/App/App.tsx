@@ -6,7 +6,7 @@ import Home from "modules/home/components/Home/Home";
 import PricingPlans from "modules/home/components/PricingPlans/PricingPlans";
 import StackedDeck from "modules/deck/components/StackedDeck/StackedDeck";
 import RouterWithMenu from "modules/common/components/RouterWithMenu/RouteWithMenu";
-import Instructions from "modules/instructions/components/Instructions";
+import Instructions from "modules/instructions/components/instructions/Instructions";
 
 export default function App() {
   return (
