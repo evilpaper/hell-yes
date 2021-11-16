@@ -1,9 +1,5 @@
 import styled from "styled-components";
 
-interface IHeader {
-  textColor: string;
-}
-
 // This is only temporary to center placeholder components
 export const Content = styled.section`
   display: flex;
@@ -37,22 +33,27 @@ export const Card = styled.li<any>`
   /* prettier-ignore */
   box-shadow: 0 4px 4px rgba(0,0,0,0.3);
   overflow: hidden;
+
+  & > * {
+    margin-top: 0.6rem;
+  }
 `;
 
 export const Logo = styled.img`
   margin: 0 auto;
-`;
-
-export const Header = styled.h1<IHeader>`
-  color: ${(props) => props.theme.color.primaryLight};
-  font-weight: 500;
-  font-size: 1.4em;
-  margin: 0 auto;
-  text-align: center;
+  width: 2.6rem;
 `;
 
 export const Kicker = styled.p`
+  color: ${(props) => props.theme.color.grey};
+  text-align: center;
+`;
+
+export const Header = styled.h1`
   color: ${(props) => props.theme.color.greyDark};
+  font-weight: 400;
+  line-height: 1.2em;
+  font-size: 1.2em;
   text-align: center;
 `;
 
@@ -78,11 +79,11 @@ export const Actions = styled.div`
 
 export const Button = styled.button`
   background-color: transparent;
-  border: 1px solid ${(props) => props.theme.color.greyDark};
+  border: 1px solid ${(props) => props.theme.color.grey};
   color: white;
-  padding: 0.6rem 1rem;
+  padding: 1rem 1rem;
   border-radius: 10rem;
-  min-width: 5rem;
+  min-width: 4.6rem;
 `;
 
 export const BackButton = styled.button`

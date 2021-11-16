@@ -5,6 +5,7 @@ import { DECKS } from "constants/DECKS";
 
 interface ICardItem {
   term: string;
+  definition: string;
   rotation: number;
 }
 
@@ -65,8 +66,8 @@ export default function TrainingDeck() {
               rotation={card.rotation}
             >
               <S.Logo src={deck.logo} alt="Deck logo" />
-              <S.Kicker>Term</S.Kicker>
-              <S.Header textColor={"black"}>{card.term}</S.Header>
+              {/* <S.Kicker>Term</S.Kicker> */}
+              <S.Header>{card.definition}</S.Header>
               <S.Footer>{deck.name}</S.Footer>
             </S.Card>
           ))}
