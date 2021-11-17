@@ -54,7 +54,10 @@ export default function TrainingDeck() {
 
   return (
     <S.Content>
-      <S.BackButton onClick={handleBackClick}>Back</S.BackButton>
+      <S.BackButton onClick={handleBackClick}>
+        <S.BackIcon />
+        Back
+      </S.BackButton>
       <S.Deck>
         {cards &&
           cards.map((card, index) => (
@@ -78,9 +81,13 @@ export default function TrainingDeck() {
         )}
       </S.Deck>
       <S.Actions>
-        <S.Button onClick={handleCardClick}>No</S.Button>
-        <S.Button>Flip</S.Button>
-        <S.Button onClick={handleCardClick}>Yes</S.Button>
+        <S.SelectButton onClick={handleCardClick}>
+          <S.CrossIcon />
+        </S.SelectButton>
+        <S.FlipButton>Flip</S.FlipButton>
+        <S.SelectButton onClick={handleCardClick}>
+          <S.CheckIcon />
+        </S.SelectButton>
       </S.Actions>
     </S.Content>
   );

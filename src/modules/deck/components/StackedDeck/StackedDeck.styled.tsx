@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import { ReactComponent as Cross } from "assets/images/cross.svg";
+import { ReactComponent as Check } from "assets/images/check.svg";
+import { ReactComponent as Back } from "assets/images/chevron-left.svg";
 
 // This is only temporary to center placeholder components
 export const Content = styled.section`
@@ -8,6 +11,10 @@ export const Content = styled.section`
   flex-direction: column;
   width: 100%;
   height: 100vh;
+`;
+
+export const BackIcon = styled(Back)`
+  margin-right: 0.6rem;
 `;
 
 export const Deck = styled.ul`
@@ -77,13 +84,38 @@ export const Actions = styled.div`
   margin-top: 3rem;
 `;
 
-export const Button = styled.button`
+export const CrossIcon = styled(Cross)`
+  width: 1rem;
+  height: auto;
+`;
+
+export const CheckIcon = styled(Check)`
+  width: 1rem;
+  height: auto;
+`;
+
+export const FlipButton = styled.button`
   background-color: transparent;
   border: 1px solid ${(props) => props.theme.color.grey};
   color: white;
-  padding: 1rem 1rem;
   border-radius: 10rem;
-  min-width: 4.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+  height: 4rem;
+`;
+
+export const SelectButton = styled.button`
+  background-color: transparent;
+  border: 1px solid ${(props) => props.theme.color.grey};
+  color: white;
+  border-radius: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
 `;
 
 export const BackButton = styled.button`
@@ -93,8 +125,9 @@ export const BackButton = styled.button`
   background-color: transparent;
   border: none;
   color: white;
-  padding: 1rem;
-  border-radius: 50%;
+  padding: 1rem 2rem;
+  border-radius: 10rem;
+  border: 1px solid ${(props) => props.theme.color.grey};
 `;
 
 export const RestartButton = styled.button`
