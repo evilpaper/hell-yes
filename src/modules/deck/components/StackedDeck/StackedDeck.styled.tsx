@@ -9,8 +9,22 @@ export const Content = styled.section`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+`;
+
+export const TopBar = styled.nav`
+  display: flex;
+  align-items: center;
   width: 100%;
-  height: 100vh;
+  margin-bottom: 2rem;
+`;
+
+export const BackButton = styled.button`
+  background-color: transparent;
+  border: none;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 10rem;
+  // border: 1px solid ${(props) => props.theme.color.grey};
 `;
 
 export const BackIcon = styled(Back)`
@@ -116,18 +130,6 @@ export const SelectButton = styled.button`
   justify-content: center;
   width: 4rem;
   height: 4rem;
-`;
-
-export const BackButton = styled.button`
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-  background-color: transparent;
-  border: none;
-  color: white;
-  padding: 1rem 2rem;
-  border-radius: 10rem;
-  border: 1px solid ${(props) => props.theme.color.grey};
 `;
 
 export const RestartButton = styled.button`
