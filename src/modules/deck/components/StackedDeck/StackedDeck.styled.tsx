@@ -6,6 +6,7 @@ import { ReactComponent as Back } from "assets/images/chevron-left.svg";
 // This is only temporary to center placeholder components
 export const Content = styled.section`
   display: flex;
+  flex: 1 0 auto;
   justify-content: center;
   align-items: center;
   flex-direction: column;
