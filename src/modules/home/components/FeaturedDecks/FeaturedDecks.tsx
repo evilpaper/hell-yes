@@ -11,7 +11,6 @@ export default function FeaturedDecks() {
     <>
       <S.SectionHeading>Featured decks</S.SectionHeading>
       <S.List>
-        {" "}
         {decks.map((deck) => (
           <S.ListItem key={deck.id}>
             <Link to={`/deck/${deck.routeID}`}>

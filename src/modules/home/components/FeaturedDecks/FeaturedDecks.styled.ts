@@ -15,8 +15,11 @@ export const List = styled.ul`
   padding-bottom: 1rem;
 
   scroll-snap-type: x mandatory;
+  scroll-padding: 0 0 0 6%;
 `;
 
 export const ListItem = styled.li`
   margin-right: 2rem;
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
 `;
