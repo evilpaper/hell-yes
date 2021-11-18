@@ -33,7 +33,7 @@ export const BackIcon = styled(Back)`
 export const Deck = styled.ul`
   position: relative;
   width: 16rem;
-  height: 22rem;
+  height: 24rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,8 +41,8 @@ export const Deck = styled.ul`
 
 export const Card = styled.li<any>`
   position: absolute;
-  width: 16rem;
-  height: 24rem;
+  width: 100%;
+  height: 100%;
   border-radius: 1rem;
   color: black;
   background-color: white;
