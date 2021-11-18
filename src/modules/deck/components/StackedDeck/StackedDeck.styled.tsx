@@ -11,6 +11,7 @@ export const Content = styled.section`
   align-items: center;
   flex-direction: column;
   height: 100vh;
+  min-height: -webkit-fill-available;
   padding-bottom: 2rem;
 `;
 
