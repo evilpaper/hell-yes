@@ -7,16 +7,18 @@ import { ReactComponent as Back } from "assets/images/chevron-left.svg";
 export const Content = styled.section`
   display: flex;
   flex: 1 0 auto;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  height: 100vh;
+  padding-bottom: 2rem;
 `;
 
 export const TopBar = styled.nav`
   display: flex;
   align-items: center;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 `;
 
 export const BackButton = styled.button`
@@ -95,7 +97,7 @@ export const Actions = styled.div`
   display: flex;
   justify-content: space-between;
   width: 16rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
 `;
 
 export const CrossIcon = styled(Cross)`
