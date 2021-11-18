@@ -24,7 +24,6 @@ export const BackButton = styled.button`
   color: white;
   padding: 1rem 2rem;
   border-radius: 10rem;
-  // border: 1px solid ${(props) => props.theme.color.grey};
 `;
 
 export const BackIcon = styled(Back)`
