@@ -8,7 +8,9 @@ interface IContent {
 }
 
 export const Background = styled.section<IContent>`
+  height: 100vh;
   height: ${(props) => props.height}px;
+  overflow: hidden;
 `;
 
 export const Content = styled.section`
@@ -19,7 +21,6 @@ export const Content = styled.section`
   align-items: center;
   flex-direction: column;
   padding-bottom: 2rem;
-  overflow-y: hidden;
 `;
 
 export const TopBar = styled.nav`

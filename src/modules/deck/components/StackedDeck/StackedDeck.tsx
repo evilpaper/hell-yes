@@ -38,9 +38,17 @@ export default function TrainingDeck() {
     setCards(cardsWithRotation);
   }, [id]);
 
-  useEffect(() => {
+  function handleWindowResize() {
     setWindowHeight(window.innerHeight);
-  }, [windowHeight]);
+  }
+
+  useEffect(() => {
+    handleWindowResize();
+    window.addEventListener("resize", handleWindowResize);
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []);
 
   function handleCardClick(e: any) {
     setCards((originalDeck) => {
