@@ -3,15 +3,21 @@ import { ReactComponent as Cross } from "assets/images/cross.svg";
 import { ReactComponent as Check } from "assets/images/check.svg";
 import { ReactComponent as Back } from "assets/images/chevron-left.svg";
 
-// This is only temporary to center placeholder components
+interface IContent {
+  height: number;
+}
+
+export const Background = styled.section<IContent>`
+  height: ${(props) => props.height}px;
+`;
+
 export const Content = styled.section`
   display: flex;
-  flex: 1 0 auto;
   justify-content: space-between;
+  flex: 1 0 auto;
+  height: 100%;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
-  min-height: -webkit-fill-available;
   padding-bottom: 2rem;
 `;
 

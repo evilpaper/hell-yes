@@ -22,6 +22,7 @@ function getRandom(min: number, max: number) {
 export default function TrainingDeck() {
   const [cards, setCards] = useState<ICardItems | []>([]);
   const [deck, setDeck] = useState<any>();
+  const [windowHeight, setWindowHeight] = useState(0);
   const params = useParams<DeckParams>();
   const history = useHistory();
   const { id } = params;
@@ -36,6 +37,10 @@ export default function TrainingDeck() {
     setDeck(selectedDeck);
     setCards(cardsWithRotation);
   }, [id]);
+
+  useEffect(() => {
+    setWindowHeight(window.innerHeight);
+  }, [windowHeight]);
 
   function handleCardClick(e: any) {
     setCards((originalDeck) => {
@@ -53,44 +58,46 @@ export default function TrainingDeck() {
   }
 
   return (
-    <S.Content>
-      <S.TopBar>
-        <S.BackButton onClick={handleBackClick}>
-          <S.BackIcon />
-          Back
-        </S.BackButton>
-      </S.TopBar>
-      <S.Deck>
-        {cards &&
-          cards.map((card, index) => (
-            <S.Card
-              key={index}
-              onClick={handleCardClick}
-              index={index}
-              length={cards.length}
-              rotation={card.rotation}
-            >
-              <S.Logo src={deck.logo} alt="Deck logo" />
-              {/* <S.Kicker>Term</S.Kicker> */}
-              <S.Header>{card.definition}</S.Header>
-              <S.Footer>{deck.name}</S.Footer>
-            </S.Card>
-          ))}
-        {!cards.length && (
-          <S.RestartButton onClick={handleRestartClick}>
-            Start again
-          </S.RestartButton>
-        )}
-      </S.Deck>
-      <S.Actions>
-        <S.SelectButton onClick={handleCardClick}>
-          <S.CrossIcon />
-        </S.SelectButton>
-        <S.FlipButton>Flip</S.FlipButton>
-        <S.SelectButton onClick={handleCardClick}>
-          <S.CheckIcon />
-        </S.SelectButton>
-      </S.Actions>
-    </S.Content>
+    <S.Background height={windowHeight}>
+      <S.Content>
+        <S.TopBar>
+          <S.BackButton onClick={handleBackClick}>
+            <S.BackIcon />
+            Back
+          </S.BackButton>
+        </S.TopBar>
+        <S.Deck>
+          {cards &&
+            cards.map((card, index) => (
+              <S.Card
+                key={index}
+                onClick={handleCardClick}
+                index={index}
+                length={cards.length}
+                rotation={card.rotation}
+              >
+                <S.Logo src={deck.logo} alt="Deck logo" />
+                {/* <S.Kicker>Term</S.Kicker> */}
+                <S.Header>{card.definition}</S.Header>
+                <S.Footer>{deck.name}</S.Footer>
+              </S.Card>
+            ))}
+          {!cards.length && (
+            <S.RestartButton onClick={handleRestartClick}>
+              Start again
+            </S.RestartButton>
+          )}
+        </S.Deck>
+        <S.Actions>
+          <S.SelectButton onClick={handleCardClick}>
+            <S.CrossIcon />
+          </S.SelectButton>
+          <S.FlipButton>Flip</S.FlipButton>
+          <S.SelectButton onClick={handleCardClick}>
+            <S.CheckIcon />
+          </S.SelectButton>
+        </S.Actions>
+      </S.Content>
+    </S.Background>
   );
 }
