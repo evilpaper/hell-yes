@@ -19,6 +19,7 @@ export const Content = styled.section`
   align-items: center;
   flex-direction: column;
   padding-bottom: 2rem;
+  overflow-y: hidden;
 `;
 
 export const TopBar = styled.nav`
