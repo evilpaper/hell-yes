@@ -34,12 +34,20 @@ export const BackButton = styled.button`
   background-color: transparent;
   border: none;
   color: white;
-  padding: 1rem 2rem;
+  padding: 0.6rem 2rem;
   border-radius: 10rem;
+
+  &:hover {
+    color: ${(props) => props.theme.color.greyLight};
+  }
 `;
 
 export const BackIcon = styled(Back)`
   margin-right: 0.6rem;
+
+  ${BackButton}:hover & {
+    stroke: ${(props) => props.theme.color.greyLight};
+  }
 `;
 
 export const Deck = styled.ul`
