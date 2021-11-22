@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { ReactComponent as Cross } from "assets/images/cross.svg";
 import { ReactComponent as Check } from "assets/images/check.svg";
-import { ReactComponent as Back } from "assets/images/chevron-left.svg";
+import { ReactComponent as Arrow } from "assets/images/arrow.svg";
 
 interface IContent {
   height: number;
@@ -34,19 +34,24 @@ export const BackButton = styled.button`
   background-color: transparent;
   border: none;
   color: white;
-  padding: 0.6rem 2rem;
-  border-radius: 10rem;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
 
   &:hover {
     color: ${(props) => props.theme.color.greyLight};
   }
 `;
 
-export const BackIcon = styled(Back)`
+export const BackIcon = styled(Arrow)`
   margin-right: 0.6rem;
+  transform: rotate(180deg);
+  fill: ${(props) => props.theme.color.white};
+  width: 1.2rem;
 
   ${BackButton}:hover & {
-    stroke: ${(props) => props.theme.color.greyLight};
+    fill: ${(props) => props.theme.color.greyLight};
   }
 `;
 
