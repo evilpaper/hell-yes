@@ -64,6 +64,12 @@ export const Deck = styled.ul`
   align-items: center;
 `;
 
+export const CardWrapper = styled.li`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+`;
+
 export const Card = styled.li<any>`
   position: absolute;
   width: 100%;

@@ -77,18 +77,30 @@ export default function TrainingDeck() {
         <S.Deck>
           {cards &&
             cards.map((card, index) => (
-              <S.Card
-                key={index}
-                onClick={handleCardClick}
-                index={index}
-                length={cards.length}
-                rotation={card.rotation}
-              >
-                <S.Logo src={deck.logo} alt="Deck logo" />
-                {/* <S.Kicker>Term</S.Kicker> */}
-                <S.Header>{card.definition}</S.Header>
-                <S.Footer>{deck.name}</S.Footer>
-              </S.Card>
+              <S.CardWrapper key={index}>
+                <S.Card>
+                  <div
+                  // onClick={handleCardClick}
+                  // index={index}
+                  // length={cards.length}
+                  // rotation={card.rotation}
+                  >
+                    <S.Logo src={deck.logo} alt="Deck logo" />
+                    <S.Header>{card.definition}</S.Header>
+                    <S.Footer>{deck.name}</S.Footer>
+                  </div>
+                  <div
+                  // onClick={handleCardClick}
+                  // index={index}
+                  // length={cards.length}
+                  // rotation={card.rotation}
+                  >
+                    <S.Logo src={deck.logo} alt="Deck logo" />
+                    <S.Header>{card.term}</S.Header>
+                    <S.Footer>{deck.name}</S.Footer>
+                  </div>
+                </S.Card>
+              </S.CardWrapper>
             ))}
           {!cards.length && (
             <S.RestartButton onClick={handleRestartClick}>
