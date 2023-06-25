@@ -37,7 +37,7 @@ Contributions are welcome. Issues are for bugs only.
 
 ## Licensing
 
-Do whatever you want with the code.
+Licensed under the MIT license.
 
 ## Available Scripts
 
