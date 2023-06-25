@@ -2,6 +2,8 @@
 
 A flash card app for memorizing things.
 
+[Try it out here](https://hell-yes.vercel.app/)
+
 ## How I worked on this project
 
 - Inital design and graphical assets are made in Figma. Link ...
